@@ -1,0 +1,23 @@
+.hexagon {
+    float: left;
+    height: 400px;
+    width: 400px;
+
+    background-color: black;
+    transition: background-color 1s;
+
+    -webkit-clip-path: polygon(200px 0, 400px 100px, 400px 300px, 200px 400px, 0px 300px, 0px 100px);
+    shape-outside: polygon(200px 0, 400px 100px, 400px 300px, 200px 400px, 0px 300px, 0px 100px);
+
+    cursor: pointer;
+}
+
+.hexagon:hover {
+    background-color: gray;
+}
+
+#second {
+    position: relative;
+    top: 310px;
+    right: 190px;
+}
