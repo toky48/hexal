@@ -2,29 +2,43 @@
   margin: 0; }
 
 .hexagon {
-  width: 500px;
-  height: 288.67513px;
-  margin: 144.33757px 0;
-  background-image: url("../../myfolio/images/banner.png");
-  background-size: auto 577.35027px;
+  float: left;
+  width: 200px;
+  height: 115.47005px;
+  margin-bottom: 73.05553px;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: black;
+  transition: background-color 1s;
+  background-size: auto 230.94011px;
   background-position: center center; }
+
+.hexagon:hover {
+  background-color: gray; }
 
 .hexagon-before-after, .hexagon:before, .hexagon:after {
   display: block;
   content: "";
   background: inherit;
-  width: 500px;
-  height: 144.33757px;
+  width: 200px;
+  height: 57.73503px;
   position: relative; }
 
 .hexagon:before {
-  bottom: 143.33757px;
+  bottom: 56.73503px;
   -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
   background-position: center top; }
 
 .hexagon:after {
-  top: 143.33757px;
+  top: 56.73503px;
   -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
   background-position: center bottom; }
+
+.hexGrid {
+  padding-top: 57.73503px;
+  overflow: auto; }
+
+.newRow {
+  margin-left: 120px; }
 
 /*# sourceMappingURL=hex.css.map */

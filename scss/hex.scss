@@ -1,4 +1,5 @@
-$hexagonWidth: 500px;
+$hexagonWidth: 200px;
+$hexMargin: 10px;
 $sqrt3: 1.73205080757;
 
 * {
@@ -6,13 +7,22 @@ $sqrt3: 1.73205080757;
 }
 
 .hexagon {
+    float: left;
     width: $hexagonWidth;
     height: $hexagonWidth / $sqrt3;
-    margin: $hexagonWidth / (2 * $sqrt3) 0;
+    margin-bottom: ($hexagonWidth / (2 * $sqrt3) - 2 + $sqrt3 * $hexMargin);
+    margin-left: $hexMargin;
+    margin-right: $hexMargin;
 
-    background-image: url('../../myfolio/images/banner.png');
+    background-color: black;
+    transition: background-color 1s;
+
     background-size: auto (2 * $hexagonWidth / $sqrt3);
     background-position: center center;
+}
+
+.hexagon:hover {
+    background-color: gray;
 }
 
  .hexagon-before-after {
@@ -40,4 +50,13 @@ $sqrt3: 1.73205080757;
     top: $hexagonWidth / (2 * $sqrt3) - 1;
     -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
     background-position: center bottom;
+}
+
+.hexGrid {
+    padding-top: $hexagonWidth / (2 * $sqrt3);
+    overflow: auto;
+}
+
+.newRow {
+    margin-left: 2 * $hexMargin + $hexagonWidth / 2;
 }
