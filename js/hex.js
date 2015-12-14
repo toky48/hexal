@@ -2,6 +2,7 @@ $(function() {
 
     function adjustHexGrid() {
         var hexGrid = $(".hexGrid");
+        hexGrid.width("auto");
         var gridWidth = hexGrid.width();
         var hexagon = $(".hexagon");
         hexagon.removeClass("newShortRow");
@@ -22,6 +23,7 @@ $(function() {
             var newShortRowHexagon = hexagon.filter(
                 ":nth-child("+ (2 * maxHexagonsInRow - 1) + "n + 1)"
             );
+
         } else {
             var newLongRowHexagon = hexagon.filter(
                 ":nth-child(2n)"
@@ -30,9 +32,20 @@ $(function() {
             var newShortRowHexagon = hexagon.filter(
                 ":nth-child(2n+1)"
             );
+
         }
         newShortRowHexagon.addClass("newShortRow");
         newLongRowHexagon.addClass("newLongRow");
+
+
+        if(maxHexagonsInRow > 1) {
+            hexGrid.width(maxHexagonsInRow * fullWidth);
+        } else {
+            var shortRowMargin =
+                parseInt(newShortRowHexagon.css("margin-left"), 10);
+                
+            hexGrid.width(shortRowMargin + hexMargin + hexWidth);
+        }
     }
 
     adjustHexGrid();

@@ -35,6 +35,7 @@
   background-position: center bottom; }
 
 .hexGrid {
+  margin: auto;
   padding-top: 57.73503px;
   overflow: auto; }
 
