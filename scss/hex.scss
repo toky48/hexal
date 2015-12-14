@@ -13,9 +13,10 @@ $sqrt3: 1.73205080757;
     margin-bottom: ($hexagonWidth / (2 * $sqrt3) - 2 + $sqrt3 * $hexMargin);
     margin-left: $hexMargin;
     margin-right: $hexMargin;
+    position: relative;
 
     background-color: black;
-    transition: background-color 1s;
+    transition: background-color 1s, transform 1s;
 
     background-size: auto (2 * $hexagonWidth / $sqrt3);
     background-position: center center;
@@ -23,6 +24,7 @@ $sqrt3: 1.73205080757;
 
 .hexagon:hover {
     background-color: gray;
+    transform: rotate(60deg);
 }
 
  .hexagon-before-after {
@@ -53,8 +55,10 @@ $sqrt3: 1.73205080757;
 }
 
 .hexGrid {
+    box-sizing: border-box;
     margin: auto;
     padding-top: $hexagonWidth / (2 * $sqrt3);
+    padding-bottom: 40px;
     overflow: auto;
 }
 
