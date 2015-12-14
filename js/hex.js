@@ -43,9 +43,15 @@ $(function() {
         } else {
             var shortRowMargin =
                 parseInt(newShortRowHexagon.css("margin-left"), 10);
-                
+
             hexGrid.width(shortRowMargin + hexMargin + hexWidth);
         }
+
+        hexagon.css("transform", "scale(0)");
+        setTimeout(function() {
+            hexagon.css("transition", "background-color 0.5s, transform 0.5s");
+            hexagon.css("transform", "scale(1)");
+        });
     }
 
     adjustHexGrid();

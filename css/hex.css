@@ -10,13 +10,12 @@
   margin-right: 10px;
   position: relative;
   background-color: black;
-  transition: background-color 1s, transform 1s;
   background-size: auto 230.94011px;
   background-position: center center; }
 
 .hexagon:hover {
   background-color: gray;
-  transform: rotate(60deg); }
+  transform: rotate(60deg) !important; }
 
 .hexagon-before-after, .hexagon:before, .hexagon:after {
   display: block;

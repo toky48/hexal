@@ -16,7 +16,6 @@ $sqrt3: 1.73205080757;
     position: relative;
 
     background-color: black;
-    transition: background-color 1s, transform 1s;
 
     background-size: auto (2 * $hexagonWidth / $sqrt3);
     background-position: center center;
@@ -24,7 +23,7 @@ $sqrt3: 1.73205080757;
 
 .hexagon:hover {
     background-color: gray;
-    transform: rotate(60deg);
+    transform: rotate(60deg) !important;
 }
 
  .hexagon-before-after {
