@@ -1,7 +1,7 @@
 .hexagon {
-    float: left;
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
+    display: none;
 
     background-color: black;
     transition: background-color 1s;
@@ -10,6 +10,79 @@
     cursor: pointer;
 }
 
-.hexagon:hover {
-    background-color: gray;
+.hexagon2:hover {
 }
+
+.hexagon2 {
+    height: 200px;
+    width: calc(200px * 1.73205); /* a * sqrt(3) */
+
+    margin: calc(200px * 0.5) auto;
+
+    background-image: url("../../myfolio/images/banner.png");
+    background-size: auto 400px;
+    background-position: center center;
+}
+
+.hexagon2top {
+    overflow: hidden;
+    margin: 0;
+    display: block;
+    content: "";
+    height: calc(200px * 0.5 * 1.73205); /* a * sqrt(3) / 2 */
+    width: 200px;
+
+    transform: translateY(calc(-200px * 0.25 * 1.73205)) translateX(calc(200px * 0.5 * 0.73205)) rotate(-30deg) skewX(30deg);
+
+    background: inherit;
+}
+
+.hexagon2bottom {
+    overflow: hidden;
+    margin: 0;
+    display: block;
+    content: "";
+    height: calc(200px * 0.5 * 1.73205); /* a * sqrt(3) / 2 */
+    width: 200px;
+
+    transform: translateY(calc(-200px * (0.75 * 1.73205 - 1))) translateX(calc(200px * 0.5 * 0.73205)) rotate(-30deg) skewX(30deg);
+
+    background: inherit;
+}
+
+.hexagon2top:after {
+    display: block;
+    height: 200px;
+    width: calc(200px * 1.73205); /* a * sqrt(3) */
+    content: "";
+    background: inherit;
+
+    transform: skewX(-30deg) rotate(30deg) translateX(calc(-200px * 0.5 * 0.77205)) translateY(calc(200px * 0.25 * 0.57));
+
+    background-position: center top;
+}
+
+.hexagon2bottom:after {
+    display: block;
+    height: 200px;
+    width: calc(200px * 1.73205); /* a * sqrt(3) */
+    content: "";
+
+    background: inherit;
+
+    transform: skewX(-30deg) rotate(30deg) translateX(calc(-200px * 0.5 * 0.77005)) translateY(calc(200px * 0.25 * 0.57205));
+
+    background-position: center bottom;
+
+}
+
+/*
+.hexagon2:after {
+    display: block;
+    content: "";
+    height: inherit;
+    width: inherit;
+
+    background-color: yellow;
+}
+*/
