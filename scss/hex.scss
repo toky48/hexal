@@ -57,6 +57,10 @@ $sqrt3: 1.73205080757;
     overflow: auto;
 }
 
-.newRow {
+.newShortRow {
     margin-left: 2 * $hexMargin + $hexagonWidth / 2;
+}
+
+.newLongRow {
+    clear: left;
 }

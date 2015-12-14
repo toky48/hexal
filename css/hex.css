@@ -38,7 +38,10 @@
   padding-top: 57.73503px;
   overflow: auto; }
 
-.newRow {
+.newShortRow {
   margin-left: 120px; }
+
+.newLongRow {
+  clear: left; }
 
 /*# sourceMappingURL=hex.css.map */
