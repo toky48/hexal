@@ -1,4 +1,30 @@
 * {
-  padding: 0; }
+  margin: 0; }
+
+.hexagon {
+  width: 500px;
+  height: 288.67513px;
+  margin: 144.33757px 0;
+  background-image: url("../../myfolio/images/banner.png");
+  background-size: auto 577.35027px;
+  background-position: center center; }
+
+.hexagon-before-after, .hexagon:before, .hexagon:after {
+  display: block;
+  content: "";
+  background: inherit;
+  width: 500px;
+  height: 144.33757px;
+  position: relative; }
+
+.hexagon:before {
+  bottom: 143.33757px;
+  -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+  background-position: center top; }
+
+.hexagon:after {
+  top: 143.33757px;
+  -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+  background-position: center bottom; }
 
 /*# sourceMappingURL=hex.css.map */

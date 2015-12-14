@@ -1,3 +1,43 @@
+$hexagonWidth: 500px;
+$sqrt3: 1.73205080757;
+
 * {
-    padding: 0;
+    margin: 0;
+}
+
+.hexagon {
+    width: $hexagonWidth;
+    height: $hexagonWidth / $sqrt3;
+    margin: $hexagonWidth / (2 * $sqrt3) 0;
+
+    background-image: url('../../myfolio/images/banner.png');
+    background-size: auto (2 * $hexagonWidth / $sqrt3);
+    background-position: center center;
+}
+
+ .hexagon-before-after {
+    display: block;
+    content: "";
+    background: inherit;
+
+    width: $hexagonWidth;
+    height: $hexagonWidth / (2 * $sqrt3);
+
+    position: relative;
+}
+
+.hexagon:before {
+    @extend .hexagon-before-after;
+
+    bottom: $hexagonWidth / (2 * $sqrt3) - 1;
+    -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
+    background-position: center top;
+}
+
+.hexagon:after {
+    @extend .hexagon-before-after;
+
+    top: $hexagonWidth / (2 * $sqrt3) - 1;
+    -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
+    background-position: center bottom;
 }
