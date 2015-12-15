@@ -54,6 +54,10 @@
 body {
   font-family: 'Open Sans'; }
 
+h1, h2 {
+  font-family: 'Ubuntu';
+  font-weight: 400; }
+
 nav {
   background-color: #323232;
   color: white;
@@ -147,7 +151,10 @@ nav {
   overflow: auto;
   padding: 40px 0; }
   .aboutContainer h2 {
-    color: #20816d; }
+    color: #20816d;
+    font-size: 1.3em;
+    line-height: 1em;
+    padding-bottom: 20px; }
 
 .about {
   margin: auto; }

@@ -17,6 +17,11 @@ body {
     font-family: 'Open Sans';
 }
 
+h1, h2 {
+    font-family: 'Ubuntu';
+    font-weight: 400;
+}
+
 @mixin menu() {
     position: absolute;
     top: 0;
@@ -87,6 +92,9 @@ nav {
 
     h2 {
         color: $darkBrandColor;
+        font-size: 1.3em;
+        line-height: 1em;
+        padding-bottom: $sectionPadding / 2;
     }
 }
 
