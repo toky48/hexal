@@ -1,8 +1,13 @@
 @import 'hex';
 $menuBackground: #323232;
 $brandColor: #2eb398;
+$brightBrandColor: #d7fcf5;
+$darkBrandColor: #20816d;
 
 $arrowWidth: 107px;
+$photoWidth: 201px;
+
+$sectionPadding: 40px;
 
 * {
     margin: 0;
@@ -66,6 +71,35 @@ nav {
     margin-right: auto;
 }
 
-.container {
+.gridContainer {
     padding-top: $arrowWidth * 2 / $sqrt3;
+}
+
+.hexGrid {
+    padding-bottom: $sectionPadding;
+}
+
+.aboutContainer {
+    background-color: $brandColor;
+    color: $brightBrandColor;
+    overflow: auto;
+    padding: $sectionPadding 0;
+
+    h2 {
+        color: $darkBrandColor;
+    }
+}
+
+.about {
+    margin: auto;
+}
+
+.photo {
+    @include hexagon($photoWidth, 20px);
+    float: left;
+    background-image: url("../images/photo.png");
+    background-position: center center;
+    background-size: cover;
+    margin-top: ($photoWidth / $sqrt3) / 2;
+    margin-bottom: ($photoWidth / $sqrt3) / 2;
 }

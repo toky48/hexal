@@ -63,6 +63,9 @@ $(function() {
 
             hexGrid.width(shortRowMargin + hexMargin + hexWidth);
         }
+
+        $(".about").width(hexGrid.width());
+
     }
 
 });
