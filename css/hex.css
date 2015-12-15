@@ -14,8 +14,7 @@
   background-position: center center; }
 
 .hexagon:hover {
-  background-color: gray;
-  transform: rotate(60deg) !important; }
+  background-color: gray; }
 
 .hexagon-before-after, .hexagon:before, .hexagon:after {
   display: block;
