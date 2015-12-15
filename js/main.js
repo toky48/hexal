@@ -10,9 +10,7 @@ $(function() {
 
     var arrHeight = $(".arrow").height();
 
-    $(".leftNav").css("transform", "translateY(0px)");
-    $(".rightNav").css("transform", "translateY(0px)");
-    $(".arrow").css("transform", "translateY(0px)");
+    $("nav").css("transform", "none");
 
     adjustMenu();
     $(window).on("resize", adjustMenu);

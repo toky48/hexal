@@ -59,15 +59,18 @@ h1, h2 {
   font-weight: 400; }
 
 nav {
+  transition: transform 1s;
+  transform: translateY(-92.66472px); }
+
+.leftNav {
   background-color: #323232;
   color: white;
   height: 61.77648px;
   position: absolute;
   top: 0;
   z-index: 1;
-  transition: transform 1s;
-  transform: translateY(-92.66472px); }
-  nav a {
+  right: 0; }
+  .leftNav a {
     display: inline-block;
     color: inherit;
     padding: 20.59216px;
@@ -75,15 +78,28 @@ nav {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.9em; }
-  nav .active {
+  .leftNav .active {
     color: #2eb398; }
 
-.leftNav {
-  right: 0; }
-
 .rightNav {
+  background-color: #323232;
+  color: white;
+  height: 61.77648px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
   left: 0;
   text-align: right; }
+  .rightNav a {
+    display: inline-block;
+    color: inherit;
+    padding: 20.59216px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9em; }
+  .rightNav .active {
+    color: #2eb398; }
 
 .arrow {
   width: 107px;
@@ -102,8 +118,6 @@ nav {
   position: absolute;
   top: 0;
   z-index: 1;
-  transition: transform 1s;
-  transform: translateY(-92.66472px);
   right: 0;
   left: 0;
   margin-left: auto;
