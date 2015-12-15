@@ -1,11 +1,129 @@
+.hexGrid {
+  box-sizing: border-box;
+  margin: auto;
+  padding-top: 58.0237px;
+  padding-bottom: 40px;
+  overflow: auto; }
+  .hexGrid .hex {
+    width: 201px;
+    height: 116.0474px;
+    margin-bottom: 73.34421px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+    background-size: auto 232.09481px;
+    background-position: center center;
+    float: left; }
+    .hexGrid .hex .hexagon-before {
+      position: absolute;
+      background: inherit;
+      overflow: hidden;
+      width: inherit;
+      height: inherit;
+      transform: rotate(60deg); }
+      .hexGrid .hex .hexagon-before:before {
+        display: block;
+        content: "";
+        background: inherit;
+        width: 201px;
+        height: 232.09481px; }
+    .hexGrid .hex .hexagon-after {
+      position: absolute;
+      background: inherit;
+      overflow: hidden;
+      width: inherit;
+      height: inherit;
+      transform: rotate(120deg); }
+      .hexGrid .hex .hexagon-after:before {
+        display: block;
+        content: "";
+        background: inherit;
+        width: 201px;
+        height: 232.09481px; }
+    .hexGrid .hex .hexagon-before:before {
+      transform: rotate(-60deg) translate(50.25px, -29.01185px); }
+    .hexGrid .hex .hexagon-after:before {
+      transform: rotate(-120deg) translate(50.25px, 29.01185px); }
+  .hexGrid .newShortRow {
+    margin-left: 120.5px; }
+  .hexGrid .newLongRow {
+    clear: left; }
+
+* {
+  margin: 0; }
+
 nav {
-  background-color: black;
+  background-color: #323232;
   color: white;
-  text-align: center; }
+  height: 61.77648px;
+  position: fixed;
+  top: 0;
+  z-index: 1; }
   nav a {
     display: inline-block;
     color: inherit;
-    padding: 20px;
+    padding: 20.59216px;
     text-decoration: none; }
+
+.leftNav {
+  right: 0; }
+
+.rightNav {
+  left: 0;
+  text-align: right; }
+
+.arrow {
+  width: 107px;
+  height: 61.77648px;
+  margin-bottom: 28.88824px;
+  margin-left: 0px;
+  margin-right: 0px;
+  position: relative;
+  background-size: auto 123.55296px;
+  background-position: center center;
+  background-color: #323232;
+  background-image: url("../images/arrow.png");
+  background-size: 64px 55px;
+  background-repeat: no-repeat;
+  background-position: 50% 65%;
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto; }
+  .arrow .hexagon-before {
+    position: absolute;
+    background: inherit;
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    transform: rotate(60deg); }
+    .arrow .hexagon-before:before {
+      display: block;
+      content: "";
+      background: inherit;
+      width: 107px;
+      height: 123.55296px; }
+  .arrow .hexagon-after {
+    position: absolute;
+    background: inherit;
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    transform: rotate(120deg); }
+    .arrow .hexagon-after:before {
+      display: block;
+      content: "";
+      background: inherit;
+      width: 107px;
+      height: 123.55296px; }
+  .arrow .hexagon-before:before {
+    transform: rotate(-60deg) translate(26.75px, -15.44412px); }
+  .arrow .hexagon-after:before {
+    transform: rotate(-120deg) translate(26.75px, 15.44412px); }
+
+.container {
+  padding-top: 123.55296px; }
 
 /*# sourceMappingURL=main.css.map */

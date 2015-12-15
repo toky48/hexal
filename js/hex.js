@@ -1,5 +1,5 @@
 $(function() {
-    var hexagon = $(".hexagon");
+    var hexagon = $(".hex");
     hexagon
         .append('<div class="hexagon-before"></div>')
         .append('<div class="hexagon-after"></div>');

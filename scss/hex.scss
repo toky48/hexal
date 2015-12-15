@@ -1,24 +1,8 @@
-$hexagonWidth: 201px;
+$hexWidth: 201px;
 $hexMargin: 10px;
 $sqrt3: 1.73205080757;
 
-* {
-    margin: 0;
-}
-
-.hexagon {
-    width: $hexagonWidth;
-    height: $hexagonWidth / $sqrt3;
-    margin-bottom: ($hexagonWidth / (2 * $sqrt3) - 2 + $sqrt3 * $hexMargin);
-    margin-left: $hexMargin;
-    margin-right: $hexMargin;
-    position: relative;
-
-    background-size: auto (2 * $hexagonWidth / $sqrt3);
-    background-position: center center;
-}
-
-@mixin hexagon-before-after($rotation) {
+@mixin hexagon-before-after($width, $rotation) {
     position: absolute;
     background: inherit;
     overflow: hidden;
@@ -31,47 +15,60 @@ $sqrt3: 1.73205080757;
         content: "";
         background: inherit;
 
-        width: $hexagonWidth;
-        height: 2 * $hexagonWidth / $sqrt3;
+        width: $width;
+        height: 2 * $width / $sqrt3;
     }
 }
 
-.hexagon-before {
-    @include hexagon-before-after(60deg);
-}
+@mixin hexagon($width, $margin) {
+    width: $width;
+    height: $width / $sqrt3;
+    margin-bottom: ($width / (2 * $sqrt3) - 2 + $sqrt3 * $margin);
+    margin-left: $margin;
+    margin-right: $margin;
+    position: relative;
 
-.hexagon-after {
-    @include hexagon-before-after(120deg);
-}
+    background-size: auto (2 * $width / $sqrt3);
+    background-position: center center;
 
-.hexagon-before:before {
-    transform: rotate(-60deg)
-               translate($hexagonWidth / 4,
-                            - $hexagonWidth * (1 / $sqrt3 - $sqrt3 / 4));
-}
+    .hexagon-before {
+        @include hexagon-before-after($width, 60deg);
+    }
 
-.hexagon-after:before {
-    transform: rotate(-120deg)
-               translate($hexagonWidth / 4,
-                            $hexagonWidth * (1 / $sqrt3 - $sqrt3 / 4));
+    .hexagon-after {
+        @include hexagon-before-after($width, 120deg);
+    }
+
+    .hexagon-before:before {
+        transform: rotate(-60deg)
+                   translate($width / 4,
+                                - $width * (1 / $sqrt3 - $sqrt3 / 4));
+    }
+
+    .hexagon-after:before {
+        transform: rotate(-120deg)
+                   translate($width / 4,
+                                $width * (1 / $sqrt3 - $sqrt3 / 4));
+    }
 }
 
 .hexGrid {
     box-sizing: border-box;
     margin: auto;
-    padding-top: $hexagonWidth / (2 * $sqrt3);
+    padding-top: $hexWidth / (2 * $sqrt3);
     padding-bottom: 40px;
     overflow: auto;
 
-    .hexagon {
+    .hex {
+        @include hexagon($hexWidth, $hexMargin);
         float: left;
     }
-}
 
-.newShortRow {
-    margin-left: 2 * $hexMargin + $hexagonWidth / 2;
-}
+    .newShortRow {
+        margin-left: 2 * $hexMargin + $hexWidth / 2;
+    }
 
-.newLongRow {
-    clear: left;
+    .newLongRow {
+        clear: left;
+    }
 }
