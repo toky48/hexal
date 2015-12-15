@@ -5,9 +5,9 @@ $brightBrandColor: #d7fcf5;
 $darkBrandColor: #20816d;
 $brandBorderColor: #219d84;
 $borderColor: #e4e9eb;
-$containerBackground: #323232;
-$containerBackroundLight: #454545;
-$containerColor: #e0e0e0;
+$contactBackground: #323232;
+$contactBackgroundLight: #454545;
+$contactColor: #e0e0e0;
 
 $arrowWidth: 107px;
 $photoWidth: 199px;
@@ -144,10 +144,42 @@ nav {
 
 .contactContainer {
     @include container();
-    background-color: $containerBackground;
-    color: $containerColor;
+    background-color: $contactBackground;
+    color: $contactColor;
+
+    h2 {
+        font-weight: 300;
+    }
 }
 
 .contact {
     margin: auto;
+
+    form {
+        width: 70%;
+        overflow: auto;
+
+        * {
+            width: 100%;
+            background-color: $contactBackgroundLight;
+            color: inherit;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-style: none;
+            font: 1em 'Open Sans';
+        }
+
+        input[type="submit"] {
+            width: auto;
+            float: right;
+            text-transform: uppercase;
+            background-color: $brandColor;
+            padding: 15px 30px;
+            font: 500 1em 'Ubuntu';
+
+            color: #ffffff;
+        }
+
+    }
 }
