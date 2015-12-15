@@ -2,7 +2,6 @@
   margin: 0; }
 
 .hexagon {
-  float: left;
   width: 200px;
   height: 115.47005px;
   margin-bottom: 73.05553px;
@@ -40,6 +39,8 @@
   padding-top: 57.73503px;
   padding-bottom: 40px;
   overflow: auto; }
+  .hexGrid .hexagon {
+    float: left; }
 
 .newShortRow {
   margin-left: 120px; }

@@ -7,7 +7,6 @@ $sqrt3: 1.73205080757;
 }
 
 .hexagon {
-    float: left;
     width: $hexagonWidth;
     height: $hexagonWidth / $sqrt3;
     margin-bottom: ($hexagonWidth / (2 * $sqrt3) - 2 + $sqrt3 * $hexMargin);
@@ -58,6 +57,10 @@ $sqrt3: 1.73205080757;
     padding-top: $hexagonWidth / (2 * $sqrt3);
     padding-bottom: 40px;
     overflow: auto;
+
+    .hexagon {
+        float: left;
+    }
 }
 
 .newShortRow {
