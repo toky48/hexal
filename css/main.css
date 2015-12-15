@@ -160,7 +160,9 @@ nav {
   padding-top: 123.55296px; }
 
 .hexGrid {
-  padding-bottom: 40px; }
+  padding-bottom: 20px;
+  margin-bottom: 13.33333px !important;
+  border-bottom: solid 1px #e4e9eb; }
 
 .aboutContainer {
   background-color: #2eb398;

@@ -93,7 +93,9 @@ nav {
 }
 
 .hexGrid {
-    padding-bottom: $sectionPadding;
+    padding-bottom: ($sectionPadding / 2);
+    margin-bottom: ($sectionPadding / 3) !important;
+    border-bottom: solid 1px $borderColor;
 }
 
 .aboutContainer {
