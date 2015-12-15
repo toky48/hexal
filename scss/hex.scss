@@ -20,35 +20,42 @@ $sqrt3: 1.73205080757;
     background-position: center center;
 }
 
-.hexagon:hover {
-    background-color: gray;
-}
-
- .hexagon-before-after {
-    display: block;
-    content: "";
+@mixin hexagon-before-after($rotation) {
+    position: absolute;
     background: inherit;
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    transform: rotate($rotation);
 
-    width: $hexagonWidth;
-    height: $hexagonWidth / (2 * $sqrt3);
+    &:before {
+        display: block;
+        content: "";
+        background: inherit;
 
-    position: relative;
+        width: $hexagonWidth;
+        height: 2 * $hexagonWidth / $sqrt3;
+    }
 }
 
-.hexagon:before {
-    @extend .hexagon-before-after;
-
-    bottom: $hexagonWidth / (2 * $sqrt3) - 1;
-    -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-    background-position: center top;
+.hexagon-before {
+    @include hexagon-before-after(60deg);
 }
 
-.hexagon:after {
-    @extend .hexagon-before-after;
+.hexagon-after {
+    @include hexagon-before-after(120deg);
+}
 
-    top: $hexagonWidth / (2 * $sqrt3) - 1;
-    -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-    background-position: center bottom;
+.hexagon-before:before {
+    transform: rotate(-60deg)
+               translate($hexagonWidth / 4,
+                            - $hexagonWidth * (1 / $sqrt3 - $sqrt3 / 4));
+}
+
+.hexagon-after:before {
+    transform: rotate(-120deg)
+               translate($hexagonWidth / 4,
+                            $hexagonWidth * (1 / $sqrt3 - $sqrt3 / 4));
 }
 
 .hexGrid {

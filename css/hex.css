@@ -12,26 +12,39 @@
   background-size: auto 230.94011px;
   background-position: center center; }
 
-.hexagon:hover {
-  background-color: gray; }
-
-.hexagon-before-after, .hexagon:before, .hexagon:after {
-  display: block;
-  content: "";
+.hexagon-before {
+  position: absolute;
   background: inherit;
-  width: 200px;
-  height: 57.73503px;
-  position: relative; }
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  transform: rotate(60deg); }
+  .hexagon-before:before {
+    display: block;
+    content: "";
+    background: inherit;
+    width: 200px;
+    height: 230.94011px; }
 
-.hexagon:before {
-  bottom: 56.73503px;
-  -webkit-clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
-  background-position: center top; }
+.hexagon-after {
+  position: absolute;
+  background: inherit;
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+  transform: rotate(120deg); }
+  .hexagon-after:before {
+    display: block;
+    content: "";
+    background: inherit;
+    width: 200px;
+    height: 230.94011px; }
 
-.hexagon:after {
-  top: 56.73503px;
-  -webkit-clip-path: polygon(0% 0%, 50% 100%, 100% 0%);
-  background-position: center bottom; }
+.hexagon-before:before {
+  transform: rotate(-60deg) translate(50px, -28.86751px); }
+
+.hexagon-after:before {
+  transform: rotate(-120deg) translate(50px, 28.86751px); }
 
 .hexGrid {
   box-sizing: border-box;
