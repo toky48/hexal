@@ -1,10 +1,27 @@
 $(function() {
+    var hexagon = $(".hexagon");
+    hexagon
+        .append('<div class="hexagon-before"></div>')
+        .append('<div class="hexagon-after"></div>');
+
+    hexagon.each(function(i, hex) {
+        var imageUrl = $(hex).attr("data-image");
+        $(hex).css("background-image", "url(" + imageUrl + ")");
+    });
+
+    adjustHexGrid();
+    $(window).on("resize", adjustHexGrid);
+
+    hexagon.css("transform", "scale(0)");
+    setTimeout(function() {
+        hexagon.css("transition", "transform 0.5s");
+        hexagon.css("transform", "scale(1)");
+    });
 
     function adjustHexGrid() {
         var hexGrid = $(".hexGrid");
         hexGrid.width("auto");
         var gridWidth = hexGrid.width();
-        var hexagon = $(".hexagon");
         hexagon.removeClass("newShortRow");
         hexagon.removeClass("newLongRow");
 
@@ -46,15 +63,6 @@ $(function() {
 
             hexGrid.width(shortRowMargin + hexMargin + hexWidth);
         }
-        hexagon.css("transform", "scale(0)");
-        setTimeout(function() {
-            hexagon.css("transition", "transform 0.5s");
-            hexagon.css("transform", "scale(1)");
-        });
     }
-
-    adjustHexGrid();
-    $(window).on("resize", adjustHexGrid);
-
 
 });

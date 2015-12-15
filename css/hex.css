@@ -2,14 +2,13 @@
   margin: 0; }
 
 .hexagon {
-  width: 200px;
-  height: 115.47005px;
-  margin-bottom: 73.05553px;
+  width: 201px;
+  height: 116.0474px;
+  margin-bottom: 73.34421px;
   margin-left: 10px;
   margin-right: 10px;
   position: relative;
-  background-color: black;
-  background-size: auto 230.94011px;
+  background-size: auto 232.09481px;
   background-position: center center; }
 
 .hexagon-before {
@@ -23,8 +22,8 @@
     display: block;
     content: "";
     background: inherit;
-    width: 200px;
-    height: 230.94011px; }
+    width: 201px;
+    height: 232.09481px; }
 
 .hexagon-after {
   position: absolute;
@@ -37,26 +36,26 @@
     display: block;
     content: "";
     background: inherit;
-    width: 200px;
-    height: 230.94011px; }
+    width: 201px;
+    height: 232.09481px; }
 
 .hexagon-before:before {
-  transform: rotate(-60deg) translate(50px, -28.86751px); }
+  transform: rotate(-60deg) translate(50.25px, -29.01185px); }
 
 .hexagon-after:before {
-  transform: rotate(-120deg) translate(50px, 28.86751px); }
+  transform: rotate(-120deg) translate(50.25px, 29.01185px); }
 
 .hexGrid {
   box-sizing: border-box;
   margin: auto;
-  padding-top: 57.73503px;
+  padding-top: 58.0237px;
   padding-bottom: 40px;
   overflow: auto; }
   .hexGrid .hexagon {
     float: left; }
 
 .newShortRow {
-  margin-left: 120px; }
+  margin-left: 120.5px; }
 
 .newLongRow {
   clear: left; }

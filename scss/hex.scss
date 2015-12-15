@@ -1,4 +1,4 @@
-$hexagonWidth: 200px;
+$hexagonWidth: 201px;
 $hexMargin: 10px;
 $sqrt3: 1.73205080757;
 
@@ -13,8 +13,6 @@ $sqrt3: 1.73205080757;
     margin-left: $hexMargin;
     margin-right: $hexMargin;
     position: relative;
-
-    background-color: black;
 
     background-size: auto (2 * $hexagonWidth / $sqrt3);
     background-position: center center;
