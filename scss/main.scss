@@ -4,6 +4,7 @@ $brandColor: #2eb398;
 $brightBrandColor: #d7fcf5;
 $darkBrandColor: #20816d;
 $brandBorderColor: #219d84;
+$borderColor: #e4e9eb;
 
 $arrowWidth: 107px;
 $photoWidth: 201px;
@@ -35,9 +36,8 @@ nav {
 }
 
 @mixin nav-left-right() {
-    background-color: $menuBackground;
-    color: white;
-    height: ($arrowWidth / $sqrt3);
+    padding-bottom: ($sectionPadding / 3);
+    border-bottom: solid 1px $borderColor;
     @include menu();
 
     a {
@@ -55,15 +55,21 @@ nav {
     }
 }
 
-.leftNav {
+.leftNavContainer {
     @include nav-left-right();
     right: 0;
 }
 
-.rightNav {
+.rightNavContainer {
     @include nav-left-right();
     left: 0;
     text-align: right;
+}
+
+.rightNav, .leftNav {
+    background-color: $menuBackground;
+    color: white;
+    height: ($arrowWidth / $sqrt3);
 }
 
 .arrow {
