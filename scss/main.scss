@@ -1,2 +1,12 @@
-div {
+nav {
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    a {
+        display: inline-block;
+        color: inherit;
+        padding: 20px;
+        text-decoration: none;
+    }
 }
