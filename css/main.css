@@ -149,7 +149,8 @@ nav {
   background-color: #2eb398;
   color: #d7fcf5;
   overflow: auto;
-  padding: 40px 0; }
+  padding: 40px 0;
+  text-align: justify; }
   .aboutContainer h2 {
     color: #20816d;
     font-size: 1.3em;
@@ -173,7 +174,8 @@ nav {
   background-position: center center;
   background-size: cover;
   margin-top: 58.0237px;
-  margin-bottom: 58.0237px; }
+  margin-bottom: 58.0237px;
+  margin-left: 0; }
   .photo .hexagon-before {
     position: absolute;
     background: inherit;

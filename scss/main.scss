@@ -89,6 +89,7 @@ nav {
     color: $brightBrandColor;
     overflow: auto;
     padding: $sectionPadding 0;
+    text-align: justify;
 
     h2 {
         color: $darkBrandColor;
@@ -110,4 +111,5 @@ nav {
     background-size: cover;
     margin-top: ($photoWidth / $sqrt3) / 2;
     margin-bottom: ($photoWidth / $sqrt3) / 2;
+    margin-left: 0;
 }

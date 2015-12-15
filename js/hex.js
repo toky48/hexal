@@ -55,16 +55,20 @@ $(function() {
         newLongRowHexagon.addClass("newLongRow");
 
 
+        var sectionWidth;
+
         if(maxHexagonsInRow > 1) {
             hexGrid.width(maxHexagonsInRow * fullWidth);
+            sectionWidth = (maxHexagonsInRow - 1) * fullWidth - 2 * hexMargin;
         } else {
             var shortRowMargin =
                 parseInt(newShortRowHexagon.css("margin-left"), 10);
 
             hexGrid.width(shortRowMargin + hexMargin + hexWidth);
+            sectionWidth = "100%";
         }
 
-        $(".about").width(hexGrid.width());
+        $(".about").width(sectionWidth);
 
     }
 
