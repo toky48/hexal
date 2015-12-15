@@ -6,17 +6,17 @@ $(function() {
 
     hexagon.each(function(i, hex) {
         var imageUrl = $(hex).attr("data-image");
-        $(hex).css("background-image", "url(" + imageUrl + ")");
-    });
+       $(hex).css("background-image", "url(" + imageUrl + ")");
+   });
 
-    adjustHexGrid();
-    $(window).on("resize", adjustHexGrid);
+   adjustHexGrid();
+   $(window).on("resize", adjustHexGrid);
 
     hexagon.css("transform", "scale(0)");
     setTimeout(function() {
         hexagon.css("transition", "transform 0.5s");
         hexagon.css("transform", "scale(1)");
-    });
+    }, 800);
 
     function adjustHexGrid() {
         var hexGrid = $(".hexGrid");

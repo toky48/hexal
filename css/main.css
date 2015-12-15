@@ -59,9 +59,11 @@ nav {
   background-color: #323232;
   color: white;
   height: 61.77648px;
-  position: fixed;
+  position: absolute;
   top: 0;
-  z-index: 1; }
+  z-index: 1;
+  transition: transform 1s;
+  transform: translateY(-92.66472px); }
   nav a {
     display: inline-block;
     color: inherit;
@@ -94,8 +96,11 @@ nav {
   background-size: 64px 55px;
   background-repeat: no-repeat;
   background-position: 50% 65%;
-  position: fixed;
-  z-index: 2;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  transition: transform 1s;
+  transform: translateY(-92.66472px);
   right: 0;
   left: 0;
   margin-left: auto;
