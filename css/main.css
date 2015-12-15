@@ -148,7 +148,6 @@ nav {
 .aboutContainer {
   background-color: #2eb398;
   color: #d7fcf5;
-  overflow: auto;
   padding: 40px 0;
   text-align: justify; }
   .aboutContainer h2 {
@@ -158,7 +157,12 @@ nav {
     padding-bottom: 20px; }
 
 .about {
-  margin: auto; }
+  margin: auto;
+  overflow: auto;
+  box-sizing: content-box;
+  padding: 0 20px;
+  border-left: solid 1px #219d84;
+  border-right: solid 1px #219d84; }
 
 .photo {
   width: 201px;

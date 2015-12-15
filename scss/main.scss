@@ -3,6 +3,7 @@ $menuBackground: #323232;
 $brandColor: #2eb398;
 $brightBrandColor: #d7fcf5;
 $darkBrandColor: #20816d;
+$brandBorderColor: #219d84;
 
 $arrowWidth: 107px;
 $photoWidth: 201px;
@@ -87,7 +88,6 @@ nav {
 .aboutContainer {
     background-color: $brandColor;
     color: $brightBrandColor;
-    overflow: auto;
     padding: $sectionPadding 0;
     text-align: justify;
 
@@ -101,6 +101,11 @@ nav {
 
 .about {
     margin: auto;
+    overflow: auto;
+    box-sizing: content-box;
+    padding: 0 ($sectionPadding / 2);
+    border-left: solid 1px $brandBorderColor;
+    border-right: solid 1px $brandBorderColor;
 }
 
 .photo {
