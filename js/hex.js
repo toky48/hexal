@@ -69,6 +69,7 @@ $(function() {
         }
 
         $(".about").width(sectionWidth);
+        $(".contact").width(sectionWidth);
 
     }
 

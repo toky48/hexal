@@ -5,9 +5,12 @@ $brightBrandColor: #d7fcf5;
 $darkBrandColor: #20816d;
 $brandBorderColor: #219d84;
 $borderColor: #e4e9eb;
+$containerBackground: #323232;
+$containerBackroundLight: #454545;
+$containerColor: #e0e0e0;
 
 $arrowWidth: 107px;
-$photoWidth: 201px;
+$photoWidth: 199px;
 
 $sectionPadding: 40px;
 
@@ -98,17 +101,24 @@ nav {
     border-bottom: solid 1px $borderColor;
 }
 
-.aboutContainer {
-    background-color: $brandColor;
-    color: $brightBrandColor;
+@mixin container() {
     padding: $sectionPadding 0;
     text-align: justify;
 
     h2 {
-        color: $darkBrandColor;
-        font-size: 1.3em;
+        font-size: 1.2em;
         line-height: 1em;
         padding-bottom: $sectionPadding / 2;
+    }
+}
+
+.aboutContainer {
+    @include container();
+    background-color: $brandColor;
+    color: $brightBrandColor;
+
+    h2 {
+        color: $darkBrandColor;
     }
 }
 
@@ -126,8 +136,18 @@ nav {
     float: left;
     background-image: url("../images/photo.png");
     background-position: center center;
-    background-size: cover;
+    background-size: auto ($photoWidth * 2 / $sqrt3);
     margin-top: ($photoWidth / $sqrt3) / 2;
     margin-bottom: ($photoWidth / $sqrt3) / 2;
     margin-left: 0;
+}
+
+.contactContainer {
+    @include container();
+    background-color: $containerBackground;
+    color: $containerColor;
+}
+
+.contact {
+    margin: auto;
 }

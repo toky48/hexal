@@ -165,15 +165,16 @@ nav {
   border-bottom: solid 1px #e4e9eb; }
 
 .aboutContainer {
-  background-color: #2eb398;
-  color: #d7fcf5;
   padding: 40px 0;
-  text-align: justify; }
+  text-align: justify;
+  background-color: #2eb398;
+  color: #d7fcf5; }
   .aboutContainer h2 {
-    color: #20816d;
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1em;
     padding-bottom: 20px; }
+  .aboutContainer h2 {
+    color: #20816d; }
 
 .about {
   margin: auto;
@@ -184,20 +185,20 @@ nav {
   border-right: solid 1px #219d84; }
 
 .photo {
-  width: 201px;
-  height: 116.0474px;
-  margin-bottom: 90.66472px;
+  width: 199px;
+  height: 114.8927px;
+  margin-bottom: 90.08737px;
   margin-left: 20px;
   margin-right: 20px;
   position: relative;
-  background-size: auto 232.09481px;
+  background-size: auto 229.78541px;
   background-position: center center;
   float: left;
   background-image: url("../images/photo.png");
   background-position: center center;
-  background-size: cover;
-  margin-top: 58.0237px;
-  margin-bottom: 58.0237px;
+  background-size: auto 229.78541px;
+  margin-top: 57.44635px;
+  margin-bottom: 57.44635px;
   margin-left: 0; }
   .photo .hexagon-before {
     position: absolute;
@@ -210,8 +211,8 @@ nav {
       display: block;
       content: "";
       background: inherit;
-      width: 201px;
-      height: 232.09481px; }
+      width: 199px;
+      height: 229.78541px; }
   .photo .hexagon-after {
     position: absolute;
     background: inherit;
@@ -223,11 +224,24 @@ nav {
       display: block;
       content: "";
       background: inherit;
-      width: 201px;
-      height: 232.09481px; }
+      width: 199px;
+      height: 229.78541px; }
   .photo .hexagon-before:before {
-    transform: rotate(-60deg) translate(50.25px, -29.01185px); }
+    transform: rotate(-60deg) translate(49.75px, -28.72318px); }
   .photo .hexagon-after:before {
-    transform: rotate(-120deg) translate(50.25px, 29.01185px); }
+    transform: rotate(-120deg) translate(49.75px, 28.72318px); }
+
+.contactContainer {
+  padding: 40px 0;
+  text-align: justify;
+  background-color: #323232;
+  color: #e0e0e0; }
+  .contactContainer h2 {
+    font-size: 1.2em;
+    line-height: 1em;
+    padding-bottom: 20px; }
+
+.contact {
+  margin: auto; }
 
 /*# sourceMappingURL=main.css.map */
