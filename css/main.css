@@ -52,6 +52,9 @@
 * {
   margin: 0; }
 
+body {
+  font-family: 'Open Sans'; }
+
 nav {
   background-color: #323232;
   color: white;
@@ -63,7 +66,12 @@ nav {
     display: inline-block;
     color: inherit;
     padding: 20.59216px;
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9em; }
+  nav .active {
+    color: #2eb398; }
 
 .leftNav {
   right: 0; }

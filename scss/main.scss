@@ -1,10 +1,15 @@
 @import 'hex';
 $menuBackground: #323232;
+$brandColor: #2eb398;
 
 $arrowWidth: 107px;
 
 * {
     margin: 0;
+}
+
+body {
+    font-family: 'Open Sans';
 }
 
 nav {
@@ -20,6 +25,13 @@ nav {
         color: inherit;
         padding: (($arrowWidth / $sqrt3) / 3);
         text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.9em;
+    }
+
+    .active {
+        color: $brandColor;
     }
 }
 
