@@ -208,6 +208,8 @@ nav {
     color: #2eb398; }
 
 .rightNav, .leftNav {
+  border-bottom: solid 1px #e4e9eb;
+  box-sizing: border-box;
   background-color: #323232;
   color: white;
   height: 61.77648px; }
@@ -263,6 +265,12 @@ nav {
     transform: rotate(-60deg) translate(26.75px, -15.44412px); }
   .arrow .hexagon-after:before {
     transform: rotate(-120deg) translate(26.75px, 15.44412px); }
+  .arrow .hexagon-before {
+    border-right: solid 1px #e4e9eb;
+    box-sizing: border-box; }
+  .arrow .hexagon-after {
+    border-right: solid 1px #e4e9eb;
+    box-sizing: border-box; }
 
 * {
   margin: 0; }

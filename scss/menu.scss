@@ -51,6 +51,8 @@ nav {
 }
 
 .rightNav, .leftNav {
+    border-bottom: solid 1px $borderColor;
+    box-sizing: border-box;
     background-color: $menuBackground;
     color: white;
     height: ($arrowWidth / $sqrt3);
@@ -70,4 +72,14 @@ nav {
 
     margin-left: auto;
     margin-right: auto;
+
+    .hexagon-before {
+        border-right: solid 1px $borderColor;
+        box-sizing: border-box;
+    }
+
+    .hexagon-after {
+        border-right: solid 1px $borderColor;
+        box-sizing: border-box;
+    }
 }
