@@ -1,5 +1,7 @@
 @import 'about';
 
+$arrowWidth: 107px;
+
 nav {
     transition: transform 1s;
     transform: translateY(- $arrowWidth * 1.5 / $sqrt3);
