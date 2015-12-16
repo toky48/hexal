@@ -36,6 +36,18 @@ $(function() {
         }
     });
 
+    $("nav a").on("click", function(event) {
+        event.preventDefault();
+        var linkTarget = $(this).attr("href");
+
+        var targetPos = $(linkTarget).position();
+        if(targetPos !== undefined) {
+            $("html, body").animate({
+                scrollTop: targetPos.top - arrHeight
+            }, 800);
+        }
+
+    });
 
     adjustMenu();
     $(window).on("resize", adjustMenu);
