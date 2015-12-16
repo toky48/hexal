@@ -178,7 +178,10 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    transition: color 0.2s; }
+  .leftNavContainer a:hover {
+    color: #20816d; }
   .leftNavContainer .active {
     color: #2eb398; }
 
@@ -197,7 +200,10 @@ nav {
     text-decoration: none;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 0.9em; }
+    font-size: 0.9em;
+    transition: color 0.2s; }
+  .rightNavContainer a:hover {
+    color: #20816d; }
   .rightNavContainer .active {
     color: #2eb398; }
 

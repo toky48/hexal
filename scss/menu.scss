@@ -26,6 +26,12 @@ nav {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 0.9em;
+
+        transition: color 0.2s;
+    }
+
+    a:hover {
+        color: $darkBrandColor;
     }
 
     .active {

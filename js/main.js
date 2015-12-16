@@ -36,6 +36,23 @@ $(function() {
         }
     });
 
+    $(window).on("scroll", function() {
+        var scrollPos = $(window).scrollTop();
+
+        $("section").each(function(i, section) {
+            var sectionLink =
+                $('nav a[href="#' + $(section).attr("id") + '"]');
+
+            if($(section).position().top < scrollPos + arrHeight * 1.5) {
+                if(!sectionLink.hasClass("active")) {
+                    $("nav a").removeClass("active");
+                    sectionLink.addClass("active");
+                }
+            }
+        });
+
+    });
+
     $("nav a").on("click", function(event) {
         event.preventDefault();
         var linkTarget = $(this).attr("href");
@@ -43,7 +60,7 @@ $(function() {
         var targetPos = $(linkTarget).position();
         if(targetPos !== undefined) {
             $("html, body").animate({
-                scrollTop: targetPos.top - arrHeight
+                scrollTop: targetPos.top - arrHeight + 1
             }, 800);
         }
 
