@@ -5,13 +5,9 @@ module.exports = function(grunt) {
     grunt.initConfig({
         sass: {
             dist: {
-                files: [{
-                    expand: true,
-                    cwd: "scss",
-                    src: ["*.scss"],
-                    dest: "css",
-                    ext: ".css"
-                }]
+                files: {
+                    'css/main.css': 'scss/main.scss'
+                }
             }
         },
 

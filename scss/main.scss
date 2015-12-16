@@ -1,18 +1,5 @@
-@import 'hex';
-$menuBackground: #323232;
-$brandColor: #2eb398;
-$brightBrandColor: #d7fcf5;
-$darkBrandColor: #20816d;
-$brandBorderColor: #219d84;
-$borderColor: #e4e9eb;
-$contactBackground: #323232;
-$contactBackgroundLight: #454545;
-$contactColor: #e0e0e0;
-
-$arrowWidth: 107px;
-$photoWidth: 199px;
-
-$sectionPadding: 40px;
+@import 'contact';
+@import 'menu';
 
 * {
     margin: 0;
@@ -25,70 +12,6 @@ body {
 h1, h2 {
     font-family: 'Ubuntu';
     font-weight: 400;
-}
-
-nav {
-    transition: transform 1s;
-    transform: translateY(- $arrowWidth * 1.5 / $sqrt3);
-}
-
-@mixin menu() {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-
-@mixin nav-left-right() {
-    padding-bottom: ($sectionPadding / 3);
-    border-bottom: solid 1px $borderColor;
-    @include menu();
-
-    a {
-        display: inline-block;
-        color: inherit;
-        padding: (($arrowWidth / $sqrt3) / 3);
-        text-decoration: none;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 0.9em;
-    }
-
-    .active {
-        color: $brandColor;
-    }
-}
-
-.leftNavContainer {
-    @include nav-left-right();
-    right: 0;
-}
-
-.rightNavContainer {
-    @include nav-left-right();
-    left: 0;
-    text-align: right;
-}
-
-.rightNav, .leftNav {
-    background-color: $menuBackground;
-    color: white;
-    height: ($arrowWidth / $sqrt3);
-}
-
-.arrow {
-    @include hexagon($arrowWidth, 0px);
-    background-color: $menuBackground;
-    background-image: url("../images/arrow.png");
-    background-size: 64px 55px;
-    background-repeat: no-repeat;
-    background-position: 50% 65%;
-
-    @include menu();
-    right: 0;
-    left: 0;
-
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .gridContainer {
@@ -122,26 +45,6 @@ nav {
     }
 }
 
-.about {
-    margin: auto;
-    overflow: auto;
-    box-sizing: content-box;
-    padding: 0 ($sectionPadding / 2);
-    border-left: solid 1px $brandBorderColor;
-    border-right: solid 1px $brandBorderColor;
-}
-
-.photo {
-    @include hexagon($photoWidth, 20px);
-    float: left;
-    background-image: url("../images/photo.png");
-    background-position: center center;
-    background-size: auto ($photoWidth * 2 / $sqrt3);
-    margin-top: ($photoWidth / $sqrt3) / 2;
-    margin-bottom: ($photoWidth / $sqrt3) / 2;
-    margin-left: 0;
-}
-
 .contactContainer {
     @include container();
     background-color: $contactBackground;
@@ -149,37 +52,5 @@ nav {
 
     h2 {
         font-weight: 300;
-    }
-}
-
-.contact {
-    margin: auto;
-
-    form {
-        width: 70%;
-        overflow: auto;
-
-        * {
-            width: 100%;
-            background-color: $contactBackgroundLight;
-            color: inherit;
-            box-sizing: border-box;
-            padding: 10px;
-            margin-bottom: 15px;
-            border-style: none;
-            font: 1em 'Open Sans';
-        }
-
-        input[type="submit"] {
-            width: auto;
-            float: right;
-            text-transform: uppercase;
-            background-color: $brandColor;
-            padding: 15px 30px;
-            font: 500 1em 'Ubuntu';
-
-            color: #ffffff;
-        }
-
     }
 }

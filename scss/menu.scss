@@ -1,0 +1,65 @@
+@import 'about';
+
+nav {
+    transition: transform 1s;
+    transform: translateY(- $arrowWidth * 1.5 / $sqrt3);
+}
+
+@mixin menu() {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+@mixin nav-left-right() {
+    padding-bottom: ($sectionPadding / 3);
+    border-bottom: solid 1px $borderColor;
+    @include menu();
+
+    a {
+        display: inline-block;
+        color: inherit;
+        padding: (($arrowWidth / $sqrt3) / 3);
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 0.9em;
+    }
+
+    .active {
+        color: $brandColor;
+    }
+}
+
+.leftNavContainer {
+    @include nav-left-right();
+    right: 0;
+}
+
+.rightNavContainer {
+    @include nav-left-right();
+    left: 0;
+    text-align: right;
+}
+
+.rightNav, .leftNav {
+    background-color: $menuBackground;
+    color: white;
+    height: ($arrowWidth / $sqrt3);
+}
+
+.arrow {
+    @include hexagon($arrowWidth, 0px);
+    background-color: $menuBackground;
+    background-image: url("../images/arrow.png");
+    background-size: 64px 55px;
+    background-repeat: no-repeat;
+    background-position: 50% 65%;
+
+    @include menu();
+    right: 0;
+    left: 0;
+
+    margin-left: auto;
+    margin-right: auto;
+}

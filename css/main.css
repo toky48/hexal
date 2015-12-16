@@ -1,3 +1,26 @@
+.contact {
+  margin: auto; }
+  .contact form {
+    width: 70%;
+    overflow: auto; }
+    .contact form * {
+      width: 100%;
+      background-color: #454545;
+      color: inherit;
+      box-sizing: border-box;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-style: none;
+      font: 1em 'Open Sans'; }
+    .contact form input[type="submit"] {
+      width: auto;
+      float: right;
+      text-transform: uppercase;
+      background-color: #2eb398;
+      padding: 15px 30px;
+      font: 500 1em 'Ubuntu';
+      color: #ffffff; }
+
 .hexGrid {
   box-sizing: border-box;
   margin: auto;
@@ -48,15 +71,60 @@
   .hexGrid .newLongRow {
     clear: left; }
 
-* {
-  margin: 0; }
+.about {
+  margin: auto;
+  overflow: auto;
+  box-sizing: content-box;
+  padding: 0 20px;
+  border-left: solid 1px #219d84;
+  border-right: solid 1px #219d84; }
 
-body {
-  font-family: 'Open Sans'; }
-
-h1, h2 {
-  font-family: 'Ubuntu';
-  font-weight: 400; }
+.photo {
+  width: 199px;
+  height: 114.8927px;
+  margin-bottom: 90.08737px;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+  background-size: auto 229.78541px;
+  background-position: center center;
+  float: left;
+  background-image: url("../images/photo.png");
+  background-position: center center;
+  background-size: auto 229.78541px;
+  margin-top: 57.44635px;
+  margin-bottom: 57.44635px;
+  margin-left: 0; }
+  .photo .hexagon-before {
+    position: absolute;
+    background: inherit;
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    transform: rotate(60deg); }
+    .photo .hexagon-before:before {
+      display: block;
+      content: "";
+      background: inherit;
+      width: 199px;
+      height: 229.78541px; }
+  .photo .hexagon-after {
+    position: absolute;
+    background: inherit;
+    overflow: hidden;
+    width: inherit;
+    height: inherit;
+    transform: rotate(120deg); }
+    .photo .hexagon-after:before {
+      display: block;
+      content: "";
+      background: inherit;
+      width: 199px;
+      height: 229.78541px; }
+  .photo .hexagon-before:before {
+    transform: rotate(-60deg) translate(49.75px, -28.72318px); }
+  .photo .hexagon-after:before {
+    transform: rotate(-120deg) translate(49.75px, 28.72318px); }
 
 nav {
   transition: transform 1s;
@@ -156,6 +224,16 @@ nav {
   .arrow .hexagon-after:before {
     transform: rotate(-120deg) translate(26.75px, 15.44412px); }
 
+* {
+  margin: 0; }
+
+body {
+  font-family: 'Open Sans'; }
+
+h1, h2 {
+  font-family: 'Ubuntu';
+  font-weight: 400; }
+
 .gridContainer {
   padding-top: 123.55296px; }
 
@@ -176,61 +254,6 @@ nav {
   .aboutContainer h2 {
     color: #20816d; }
 
-.about {
-  margin: auto;
-  overflow: auto;
-  box-sizing: content-box;
-  padding: 0 20px;
-  border-left: solid 1px #219d84;
-  border-right: solid 1px #219d84; }
-
-.photo {
-  width: 199px;
-  height: 114.8927px;
-  margin-bottom: 90.08737px;
-  margin-left: 20px;
-  margin-right: 20px;
-  position: relative;
-  background-size: auto 229.78541px;
-  background-position: center center;
-  float: left;
-  background-image: url("../images/photo.png");
-  background-position: center center;
-  background-size: auto 229.78541px;
-  margin-top: 57.44635px;
-  margin-bottom: 57.44635px;
-  margin-left: 0; }
-  .photo .hexagon-before {
-    position: absolute;
-    background: inherit;
-    overflow: hidden;
-    width: inherit;
-    height: inherit;
-    transform: rotate(60deg); }
-    .photo .hexagon-before:before {
-      display: block;
-      content: "";
-      background: inherit;
-      width: 199px;
-      height: 229.78541px; }
-  .photo .hexagon-after {
-    position: absolute;
-    background: inherit;
-    overflow: hidden;
-    width: inherit;
-    height: inherit;
-    transform: rotate(120deg); }
-    .photo .hexagon-after:before {
-      display: block;
-      content: "";
-      background: inherit;
-      width: 199px;
-      height: 229.78541px; }
-  .photo .hexagon-before:before {
-    transform: rotate(-60deg) translate(49.75px, -28.72318px); }
-  .photo .hexagon-after:before {
-    transform: rotate(-120deg) translate(49.75px, 28.72318px); }
-
 .contactContainer {
   padding: 40px 0;
   text-align: justify;
@@ -242,28 +265,5 @@ nav {
     padding-bottom: 20px; }
   .contactContainer h2 {
     font-weight: 300; }
-
-.contact {
-  margin: auto; }
-  .contact form {
-    width: 70%;
-    overflow: auto; }
-    .contact form * {
-      width: 100%;
-      background-color: #454545;
-      color: inherit;
-      box-sizing: border-box;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-style: none;
-      font: 1em 'Open Sans'; }
-    .contact form input[type="submit"] {
-      width: auto;
-      float: right;
-      text-transform: uppercase;
-      background-color: #2eb398;
-      padding: 15px 30px;
-      font: 500 1em 'Ubuntu';
-      color: #ffffff; }
 
 /*# sourceMappingURL=main.css.map */

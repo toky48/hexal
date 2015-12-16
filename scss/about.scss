@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'hex';
+
+.about {
+    margin: auto;
+    overflow: auto;
+    box-sizing: content-box;
+    padding: 0 ($sectionPadding / 2);
+    border-left: solid 1px $brandBorderColor;
+    border-right: solid 1px $brandBorderColor;
+}
+
+.photo {
+    @include hexagon($photoWidth, 20px);
+    float: left;
+    background-image: url("../images/photo.png");
+    background-position: center center;
+    background-size: auto ($photoWidth * 2 / $sqrt3);
+    margin-top: ($photoWidth / $sqrt3) / 2;
+    margin-bottom: ($photoWidth / $sqrt3) / 2;
+    margin-left: 0;
+}

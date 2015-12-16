@@ -1,0 +1,33 @@
+@import 'variables';
+
+.contact {
+    margin: auto;
+
+    form {
+        width: 70%;
+        overflow: auto;
+
+        * {
+            width: 100%;
+            background-color: $contactBackgroundLight;
+            color: inherit;
+            box-sizing: border-box;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-style: none;
+            font: 1em 'Open Sans';
+        }
+
+        input[type="submit"] {
+            width: auto;
+            float: right;
+            text-transform: uppercase;
+            background-color: $brandColor;
+            padding: 15px 30px;
+            font: 500 1em 'Ubuntu';
+
+            color: #ffffff;
+        }
+
+    }
+}
