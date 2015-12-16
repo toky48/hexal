@@ -247,6 +247,8 @@ h1, h2 {
   text-align: justify;
   background-color: #2eb398;
   color: #d7fcf5; }
+  .aboutContainer h1 {
+    font-size: 2em; }
   .aboutContainer h2 {
     font-size: 1.2em;
     line-height: 1em;
@@ -259,6 +261,8 @@ h1, h2 {
   text-align: justify;
   background-color: #323232;
   color: #e0e0e0; }
+  .contactContainer h1 {
+    font-size: 2em; }
   .contactContainer h2 {
     font-size: 1.2em;
     line-height: 1em;
