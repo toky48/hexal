@@ -3,9 +3,16 @@
 $formMargin: 15px;
 $iconMargin: 10px;
 
+.contactContainer {
+    padding: 0 !important;
+}
+
 .contact {
-    margin: auto;
     overflow: auto;
+    padding: $sectionPadding / 2;
+    margin: ($sectionPadding / 2) auto;
+    border-top: solid 1px $contactBorderColor;
+    border-bottom: solid 1px $contactBorderColor;
 
     form {
         width: 70%;

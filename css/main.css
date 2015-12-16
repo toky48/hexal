@@ -1,6 +1,12 @@
+.contactContainer {
+  padding: 0 !important; }
+
 .contact {
-  margin: auto;
-  overflow: auto; }
+  overflow: auto;
+  padding: 20px;
+  margin: 20px auto;
+  border-top: solid 1px #2b2b2b;
+  border-bottom: solid 1px #2b2b2b; }
   .contact form {
     width: 70%;
     float: left;
@@ -287,6 +293,7 @@ h1, h2 {
 .contactContainer {
   padding: 40px 0;
   text-align: justify;
+  overflow: hidden;
   background-color: #323232;
   color: #e0e0e0; }
   .contactContainer h1 {

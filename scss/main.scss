@@ -51,6 +51,7 @@ h1, h2 {
 
 .contactContainer {
     @include container();
+    overflow: hidden;
     background-color: $contactBackground;
     color: $contactColor;
 
