@@ -19,10 +19,13 @@ $(function() {
     $(window).on("scroll", function() {
         var scrollPos = $(window).scrollTop()
         var nav = $("nav > *");
+        var navNotArrow = nav.filter(":not(.arrow)");
 
         if(scrollPos > arrHeight && !navFixed) {
             nav.css("top", "-" + (arrHeight * 1.5) + "px");
             nav.css("position", "fixed");
+            navNotArrow.css("border-bottom-style", "none");
+
             nav.animate({
                 top: "0px"
             }, 800);
@@ -32,6 +35,7 @@ $(function() {
 
         if(scrollPos === 0) {
             nav.css("position", "absolute");
+            navNotArrow.css("border-bottom-style", "solid");
             navFixed = false;
         }
     });
