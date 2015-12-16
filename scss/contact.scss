@@ -1,10 +1,15 @@
 @import 'variables';
 
+$formMargin: 15px;
+$iconMargin: 10px;
+
 .contact {
     margin: auto;
+    overflow: auto;
 
     form {
         width: 70%;
+        float: left;
         overflow: auto;
 
         * {
@@ -13,7 +18,7 @@
             color: inherit;
             box-sizing: border-box;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: $formMargin;
             border-style: none;
             font: 1em 'Open Sans';
         }
@@ -30,4 +35,42 @@
         }
 
     }
+}
+
+.contactInfo {
+    width: 30%;
+    float: left;
+    font-size: 0.8em;
+    padding-left: $formMargin;
+    box-sizing: border-box;
+
+    p {
+        margin-bottom: 3 * $formMargin;
+    }
+
+    address {
+        font-style: normal;
+        font-weight: 600;
+
+        div {
+            margin-bottom: 3px;
+        }
+
+        img {
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+
+#location {
+    margin: 0 (3px + $iconMargin) 0 3px;
+}
+
+#phone {
+    margin: 0 (1px + $iconMargin) 0 1px;
+}
+
+#mail {
+    margin: 0 ($iconMargin) 0 0;
 }
