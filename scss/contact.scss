@@ -23,40 +23,38 @@ $iconMargin: 10px;
             text-align: center;
         }
     }
+}
 
-    form {
-        width: 70%;
-        float: left;
-        overflow: auto;
+form {
+    width: 70%;
+    float: left;
+    overflow: auto;
 
-        * {
-            width: 100%;
-            background-color: $contactBackgroundLight;
-            color: inherit;
-            box-sizing: border-box;
-            padding: 10px;
-            margin-bottom: $formMargin;
-            border-style: none;
-            font: 1em 'Open Sans';
-        }
+    @media (max-width: 830px) {
+        width: 100%;
+        margin-bottom: $formMargin;
+        border-bottom: solid 1px $contactBorderColor;
+    }
 
-        input[type="submit"] {
-            width: auto;
-            float: right;
-            text-transform: uppercase;
-            background-color: $brandColor;
-            padding: 15px 30px;
-            font: 500 1em 'Ubuntu';
+    input, textarea {
+        width: 100%;
+        background-color: $contactBackgroundLight;
+        color: inherit;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-bottom: $formMargin;
+        border-style: none;
+        font: 1em 'Open Sans';
+    }
 
-            color: #ffffff;
-        }
-
-        @media (max-width: 830px) {
-            width: 100%;
-            margin-bottom: $formMargin;
-            border-bottom: solid 1px $contactBorderColor;
-        }
-
+    input[type="submit"] {
+        width: auto;
+        float: right;
+        text-transform: uppercase;
+        background-color: $brandColor;
+        padding: 15px 30px;
+        font: 500 1em 'Ubuntu';
+        color: #ffffff;
     }
 }
 
@@ -66,6 +64,11 @@ $iconMargin: 10px;
     font-size: 0.8em;
     padding-left: $formMargin;
     box-sizing: border-box;
+
+    @media (max-width: 830px) {
+        width: 100%;
+        padding-left: 0;
+    }
 
     p {
         margin-bottom: 3 * $formMargin;
@@ -81,35 +84,30 @@ $iconMargin: 10px;
             margin-bottom: 2 * $formMargin;
         }
     }
+}
 
-    address {
-        font-style: normal;
-        font-weight: 600;
+address {
+    font-style: normal;
+    font-weight: 600;
 
-        div {
-            margin-bottom: 3px;
-        }
+    div {
+        margin-bottom: 3px;
+    }
 
-        img {
-            position: relative;
-            top: 5px;
-            float: left;
-
-            @media (min-width: 500px) and (max-width: 830px) {
-                float: right;
-            }
-        }
+    img {
+        position: relative;
+        top: 5px;
+        float: left;
 
         @media (min-width: 500px) and (max-width: 830px) {
-            text-align: right;
-            float: left;
-            width: 50%;
+            float: right;
         }
     }
 
-    @media (max-width: 830px) {
-        width: 100%;
-        padding-left: 0;
+    @media (min-width: 500px) and (max-width: 830px) {
+        text-align: right;
+        float: left;
+        width: 50%;
     }
 }
 

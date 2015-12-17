@@ -13,32 +13,33 @@
   @media (max-width: 540px) {
     .contact h1, .contact h2 {
       text-align: center; } }
-  .contact form {
-    width: 70%;
-    float: left;
-    overflow: auto; }
-    .contact form * {
+
+form {
+  width: 70%;
+  float: left;
+  overflow: auto; }
+  @media (max-width: 830px) {
+    form {
       width: 100%;
-      background-color: #454545;
-      color: inherit;
-      box-sizing: border-box;
-      padding: 10px;
       margin-bottom: 15px;
-      border-style: none;
-      font: 1em 'Open Sans'; }
-    .contact form input[type="submit"] {
-      width: auto;
-      float: right;
-      text-transform: uppercase;
-      background-color: #2eb398;
-      padding: 15px 30px;
-      font: 500 1em 'Ubuntu';
-      color: #ffffff; }
-    @media (max-width: 830px) {
-      .contact form {
-        width: 100%;
-        margin-bottom: 15px;
-        border-bottom: solid 1px #2b2b2b; } }
+      border-bottom: solid 1px #2b2b2b; } }
+  form input, form textarea {
+    width: 100%;
+    background-color: #454545;
+    color: inherit;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-style: none;
+    font: 1em 'Open Sans'; }
+  form input[type="submit"] {
+    width: auto;
+    float: right;
+    text-transform: uppercase;
+    background-color: #2eb398;
+    padding: 15px 30px;
+    font: 500 1em 'Ubuntu';
+    color: #ffffff; }
 
 .contactInfo {
   width: 30%;
@@ -46,6 +47,10 @@
   font-size: 0.8em;
   padding-left: 15px;
   box-sizing: border-box; }
+  @media (max-width: 830px) {
+    .contactInfo {
+      width: 100%;
+      padding-left: 0; } }
   .contactInfo p {
     margin-bottom: 45px; }
     @media (max-width: 830px) {
@@ -57,27 +62,24 @@
       .contactInfo p {
         width: 100%;
         margin-bottom: 30px; } }
-  .contactInfo address {
-    font-style: normal;
-    font-weight: 600; }
-    .contactInfo address div {
-      margin-bottom: 3px; }
-    .contactInfo address img {
-      position: relative;
-      top: 5px;
-      float: left; }
-      @media (min-width: 500px) and (max-width: 830px) {
-        .contactInfo address img {
-          float: right; } }
+
+address {
+  font-style: normal;
+  font-weight: 600; }
+  address div {
+    margin-bottom: 3px; }
+  address img {
+    position: relative;
+    top: 5px;
+    float: left; }
     @media (min-width: 500px) and (max-width: 830px) {
-      .contactInfo address {
-        text-align: right;
-        float: left;
-        width: 50%; } }
-  @media (max-width: 830px) {
-    .contactInfo {
-      width: 100%;
-      padding-left: 0; } }
+      address img {
+        float: right; } }
+  @media (min-width: 500px) and (max-width: 830px) {
+    address {
+      text-align: right;
+      float: left;
+      width: 50%; } }
 
 #location {
   margin-left: 3px;
