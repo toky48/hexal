@@ -9,27 +9,25 @@ $(function() {
         $(".rightNavContainer")
             .css("right", (winWidth / 2 + arrWidth / 2) + "px")
     }
-
     adjustMenu();
     $(window).on("resize", adjustMenu);
 
-    var arrHeight = $(".arrow").height();
 
     $("nav").css("transform", "none");
 
+    var arrHeight = $(".arrow").height();
+    var navEls = $("nav > *");
+    var navElsNotArrow = navEls.filter(":not(.arrow)");
     var navFixed = false;
-
     $(window).on("scroll", function() {
         var scrollPos = $(window).scrollTop()
-        var nav = $("nav > *");
-        var navNotArrow = nav.filter(":not(.arrow)");
 
         if(scrollPos > arrHeight && !navFixed) {
-            nav.css("top", "-" + (arrHeight * 1.5) + "px");
-            nav.css("position", "fixed");
-            navNotArrow.css("border-bottom-style", "none");
+            navEls.css("top", "-" + (arrHeight * 1.5) + "px");
+            navEls.css("position", "fixed");
+            navElsNotArrow.css("border-bottom-style", "none");
 
-            nav.animate({
+            navEls.animate({
                 top: "0px"
             }, 800);
 
@@ -37,22 +35,24 @@ $(function() {
         }
 
         if(scrollPos === 0) {
-            nav.css("position", "absolute");
-            navNotArrow.css("border-bottom-style", "solid");
+            navEls.css("position", "absolute");
+            navElsNotArrow.css("border-bottom-style", "solid");
             navFixed = false;
         }
     });
 
+    var sections = $("section");
+    var navLinks = $("nav a");
     $(window).on("scroll", function() {
         var scrollPos = $(window).scrollTop();
 
-        $("section").each(function(i, section) {
+        sections.each(function(i, section) {
             var sectionLink =
-                $('nav a[href="#' + $(section).attr("id") + '"]');
+                navLinks.filter('[href="#' + $(section).attr("id") + '"]');
 
             if($(section).position().top < scrollPos + arrHeight * 1.5) {
                 if(!sectionLink.hasClass("active")) {
-                    $("nav a").removeClass("active");
+                    navLinks.removeClass("active");
                     sectionLink.addClass("active");
                 }
             }
