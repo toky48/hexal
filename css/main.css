@@ -233,7 +233,7 @@ nav {
     font-weight: 700;
     font-size: 0.9em;
     transition: color 0.2s; }
-    @media (min-width: 500px) and (max-width: 600px) {
+    @media (min-width: 520px) and (max-width: 600px) {
       nav a {
         padding-left: 10px;
         padding-right: 10px; } }
@@ -241,36 +241,6 @@ nav {
     color: #20816d; }
   nav .active {
     color: #2eb398; }
-
-.leftNavContainer {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  padding-bottom: 13.33333px;
-  border-bottom: solid 1px #e4e9eb;
-  right: 0; }
-  @media (max-width: 500px) {
-    .leftNavContainer {
-      top: -123.55296px; } }
-
-.rightNavContainer {
-  position: absolute;
-  top: 0;
-  z-index: 1;
-  padding-bottom: 13.33333px;
-  border-bottom: solid 1px #e4e9eb;
-  left: 0;
-  text-align: right; }
-  @media (max-width: 500px) {
-    .rightNavContainer {
-      top: -123.55296px; } }
-
-.rightNav, .leftNav {
-  border-bottom: solid 1px #e4e9eb;
-  box-sizing: border-box;
-  background-color: #323232;
-  color: white;
-  height: 61.77648px; }
 
 .arrow {
   width: 107px;
@@ -288,7 +258,7 @@ nav {
   background-position: 50% 65%;
   position: absolute;
   top: 0;
-  z-index: 1;
+  z-index: 2;
   right: 0;
   left: 0;
   margin-left: auto;
@@ -330,6 +300,58 @@ nav {
     border-right: solid 1px #e4e9eb;
     box-sizing: border-box; }
 
+@media (min-width: 520px) {
+  .leftNavContainer {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    padding-bottom: 13.33333px;
+    border-bottom: solid 1px #e4e9eb;
+    right: 0; }
+
+  .rightNavContainer {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    padding-bottom: 13.33333px;
+    border-bottom: solid 1px #e4e9eb;
+    left: 0;
+    text-align: right; }
+
+  .rightNav, .leftNav {
+    border-bottom: solid 1px #e4e9eb;
+    box-sizing: border-box;
+    background-color: #323232;
+    color: white;
+    height: 61.77648px; } }
+@media (max-width: 520px) {
+  .mask {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    box-sizing: border-box;
+    border-bottom: solid 1px #e4e9eb;
+    z-index: 1;
+    background-color: #323232;
+    right: 0;
+    left: 0;
+    height: 61.77648px; }
+
+  nav {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    right: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding-bottom: 61.77648px;
+    background-color: #323232;
+    color: white; }
+    nav a {
+      display: block;
+      text-align: center;
+      width: 70%;
+      margin: auto; } }
 * {
   margin: 0; }
 

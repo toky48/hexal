@@ -16,7 +16,7 @@ nav {
         font-size: 0.9em;
         transition: color 0.2s;
 
-        @media (min-width: 500px) and (max-width: 600px) {
+    @media (min-width: 520px) and (max-width: 600px) {
             padding-left: 10px;
             padding-right: 10px;
         }
@@ -34,7 +34,7 @@ nav {
 @mixin menu() {
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: 2;
 }
 
 @mixin nav-left-right() {
@@ -42,30 +42,6 @@ nav {
 
     padding-bottom: ($sectionPadding / 3);
     border-bottom: solid 1px $borderColor;
-
-    @media (max-width: 500px) {
-        top: - 2 * ($arrowWidth / $sqrt3);
-    }
-
-}
-
-.leftNavContainer {
-    @include nav-left-right();
-    right: 0;
-}
-
-.rightNavContainer {
-    @include nav-left-right();
-    left: 0;
-    text-align: right;
-}
-
-.rightNav, .leftNav {
-    border-bottom: solid 1px $borderColor;
-    box-sizing: border-box;
-    background-color: $menuBackground;
-    color: white;
-    height: ($arrowWidth / $sqrt3);
 }
 
 .arrow {
@@ -79,7 +55,6 @@ nav {
     @include menu();
     right: 0;
     left: 0;
-
     margin-left: auto;
     margin-right: auto;
 
@@ -91,5 +66,57 @@ nav {
     .hexagon-after {
         border-right: solid 1px $borderColor;
         box-sizing: border-box;
+    }
+}
+
+@media (min-width: 520px) {
+    .leftNavContainer {
+        @include nav-left-right();
+        right: 0;
+    }
+
+    .rightNavContainer {
+        @include nav-left-right();
+        left: 0;
+        text-align: right;
+    }
+
+    .rightNav, .leftNav {
+        border-bottom: solid 1px $borderColor;
+        box-sizing: border-box;
+        background-color: $menuBackground;
+        color: white;
+        height: ($arrowWidth / $sqrt3);
+    }
+}
+
+@media (max-width: 520px) {
+    .mask {
+        @include menu();
+        box-sizing: border-box;
+        border-bottom: solid 1px $borderColor;
+        z-index: 1;
+        background-color: $menuBackground;
+        right: 0;
+        left: 0;
+        height: $arrowWidth / $sqrt3;
+    }
+
+    nav {
+        @include menu();
+        right: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding-bottom: ($arrowWidth / $sqrt3);
+
+        background-color: $menuBackground;
+        color: white;
+
+        a {
+            display: block;
+            text-align: center;
+            width: 70%;
+            margin: auto;
+        }
     }
 }

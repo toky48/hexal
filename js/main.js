@@ -12,34 +12,82 @@ $(function() {
     adjustMenu();
     $(window).on("resize", adjustMenu);
 
-
-    $("nav").css("transform", "none");
-
     var arrHeight = $(".arrow").height();
-    var navEls = $("nav > *");
-    var navElsNotArrow = navEls.filter(":not(.arrow)");
+/////////////////////////////////////////////////////////////////
+    var nav = $("nav");
+    var navHeight = nav.height();
+    nav.css("transform", "none");
+    var menuVisible = false;
     var navFixed = false;
-    $(window).on("scroll", function() {
-        var scrollPos = $(window).scrollTop()
 
-        if(scrollPos > arrHeight && !navFixed) {
-            navEls.css("top", "-" + (arrHeight * 1.5) + "px");
-            navEls.css("position", "fixed");
-            navElsNotArrow.css("border-bottom-style", "none");
+    if($("body").innerWidth() < 510) {
+        $(function() {
+            nav.css("top", - navHeight - arrHeight / 2);
+            $(".arrow, .mask").css("top", navHeight + arrHeight / 2);
+        });
 
-            navEls.animate({
-                top: "0px"
-            }, 800);
+        $(".arrow, .mask").on("click",function() {
+            if(menuVisible) {
+                nav.animate({"top": - navHeight - arrHeight / 2}, 800);
+                var scrollPos = $(window).scrollTop();
 
-            navFixed = true;
-        }
+                if(scrollPos === 0) {
+                    nav.css("position", "absolute");
+                    $("arrow").css("position", "absolute");
+                }
 
-        if(scrollPos === 0) {
-            navEls.css("position", "absolute");
-            navElsNotArrow.css("border-bottom-style", "solid");
-            navFixed = false;
-        }
-    });
+                menuVisible = false;
+            } else {
+                nav.animate({"top": "0px"}, 800);
+
+                nav.css("position", "fixed");
+                $("arrow").css("position", "fixed");
+
+                menuVisible = true;
+            }
+        });
+
+        $(window).on("scroll", function() {
+                var scrollPos = $(window).scrollTop();
+                if(scrollPos > arrHeight && !navFixed && !menuVisible) {
+                    nav.css("top", - navHeight - arrHeight * 2);
+                    nav.css("position", "fixed");
+
+                    nav.animate({"top": - navHeight - arrHeight / 2}, 800);
+
+                    navFixed = true;
+                }
+
+                if(scrollPos === 0) {
+                    nav.css("position", "absolute");
+
+                    navFixed = false;
+                }
+        });
+    } else {
+        var navEls = $("nav > *");
+        var navElsNotArrow = navEls.filter(":not(.arrow)");
+
+        $(window).on("scroll", function() {
+            var scrollPos = $(window).scrollTop();
+
+            if(scrollPos > arrHeight && !navFixed) {
+                navEls.css("top", "-" + (arrHeight * 1.5) + "px");
+                navEls.css("position", "fixed");
+                navElsNotArrow.css("border-bottom-style", "none");
+
+                navEls.animate({top: "0px"}, 800);
+
+                navFixed = true;
+            }
+
+            if(scrollPos === 0) {
+                navEls.css("position", "absolute");
+                navElsNotArrow.css("border-bottom-style", "solid");
+                navFixed = false;
+            }
+        });
+    }
 
     var sections = $("section");
     var navLinks = $("nav a");
