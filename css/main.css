@@ -7,6 +7,12 @@
   margin: 20px auto;
   border-top: solid 1px #2b2b2b;
   border-bottom: solid 1px #2b2b2b; }
+  @media (max-width: 900px) {
+    .contact {
+      width: 80% !important; } }
+  @media (max-width: 540px) {
+    .contact h1, .contact h2 {
+      text-align: center; } }
   .contact form {
     width: 70%;
     float: left;
@@ -28,6 +34,11 @@
       padding: 15px 30px;
       font: 500 1em 'Ubuntu';
       color: #ffffff; }
+    @media (max-width: 830px) {
+      .contact form {
+        width: 100%;
+        margin-bottom: 15px;
+        border-bottom: solid 1px #2b2b2b; } }
 
 .contactInfo {
   width: 30%;
@@ -37,6 +48,15 @@
   box-sizing: border-box; }
   .contactInfo p {
     margin-bottom: 45px; }
+    @media (max-width: 830px) {
+      .contactInfo p {
+        float: left;
+        width: 50%;
+        margin-bottom: 0; } }
+    @media (max-width: 500px) {
+      .contactInfo p {
+        width: 100%;
+        margin-bottom: 30px; } }
   .contactInfo address {
     font-style: normal;
     font-weight: 600; }
@@ -44,16 +64,44 @@
       margin-bottom: 3px; }
     .contactInfo address img {
       position: relative;
-      top: 1px; }
+      top: 5px;
+      float: left; }
+      @media (min-width: 500px) and (max-width: 830px) {
+        .contactInfo address img {
+          float: right; } }
+    @media (min-width: 500px) and (max-width: 830px) {
+      .contactInfo address {
+        text-align: right;
+        float: left;
+        width: 50%; } }
+  @media (max-width: 830px) {
+    .contactInfo {
+      width: 100%;
+      padding-left: 0; } }
 
 #location {
-  margin: 0 13px 0 3px; }
+  margin-left: 3px;
+  margin-right: 13px;
+  top: 4px; }
+  @media (min-width: 500px) and (max-width: 830px) {
+    #location {
+      margin-left: 13px;
+      margin-right: 3px; } }
 
 #phone {
-  margin: 0 11px 0 1px; }
+  margin-left: 1px;
+  margin-right: 11px; }
+  @media (min-width: 500px) and (max-width: 830px) {
+    #phone {
+      margin-left: 11px;
+      margin-right: 1px; } }
 
 #mail {
-  margin: 0 10px 0 0; }
+  margin-right: 10px; }
+  @media (min-width: 500px) and (max-width: 830px) {
+    #mail {
+      margin-left: 10px;
+      margin-right: 0; } }
 
 .hexGrid {
   box-sizing: border-box;
@@ -115,7 +163,7 @@
   @media (max-width: 900px) {
     .about {
       width: 80% !important; } }
-  @media (max-width: 480px) {
+  @media (max-width: 540px) {
     .about h1, .about h2 {
       text-align: center; } }
 
@@ -165,7 +213,7 @@
     transform: rotate(-60deg) translate(49.75px, -28.72318px); }
   .photo .hexagon-after:before {
     transform: rotate(-120deg) translate(49.75px, 28.72318px); }
-  @media (max-width: 480px) {
+  @media (max-width: 540px) {
     .photo {
       float: none;
       margin-left: auto;

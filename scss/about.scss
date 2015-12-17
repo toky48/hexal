@@ -15,7 +15,7 @@ $photoWidth: 199px;
         width: 80% !important;
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 540px) {
         h1, h2 {
             text-align: center;
         }
@@ -33,7 +33,7 @@ $photoWidth: 199px;
     margin-bottom: ($photoWidth / $sqrt3) / 2;
     margin-left: 0;
 
-    @media (max-width: 480px) {
+    @media (max-width: 540px) {
         float: none;
         margin-left: auto;
         margin-right: auto;
