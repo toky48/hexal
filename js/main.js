@@ -1,14 +1,17 @@
 $(function() {
+
     function adjustMenu() {
         var arrWidth = $('.arrow').width();
         var winWidth = $("body").innerWidth();
-
 
         $(".leftNavContainer")
             .css("left", (winWidth / 2 + arrWidth / 2) + "px");
         $(".rightNavContainer")
             .css("right", (winWidth / 2 + arrWidth / 2) + "px")
     }
+
+    adjustMenu();
+    $(window).on("resize", adjustMenu);
 
     var arrHeight = $(".arrow").height();
 
@@ -69,8 +72,4 @@ $(function() {
         }
 
     });
-
-    adjustMenu();
-    $(window).on("resize", adjustMenu);
-
 });

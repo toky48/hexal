@@ -163,49 +163,51 @@
 nav {
   transition: transform 1s;
   transform: translateY(-92.66472px); }
+  @media (max-width: 500px) {
+    nav {
+      height: 61.77648px;
+      background-color: #323232;
+      border-bottom: solid 1px #e4e9eb; } }
+  nav a {
+    display: inline-block;
+    color: inherit;
+    padding: 20.59216px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.9em;
+    transition: color 0.2s; }
+    @media (min-width: 500px) and (max-width: 600px) {
+      nav a {
+        padding-left: 10px;
+        padding-right: 10px; } }
+  nav a:hover {
+    color: #20816d; }
+  nav .active {
+    color: #2eb398; }
 
 .leftNavContainer {
-  padding-bottom: 13.33333px;
-  border-bottom: solid 1px #e4e9eb;
   position: absolute;
   top: 0;
   z-index: 1;
+  padding-bottom: 13.33333px;
+  border-bottom: solid 1px #e4e9eb;
   right: 0; }
-  .leftNavContainer a {
-    display: inline-block;
-    color: inherit;
-    padding: 20.59216px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 0.9em;
-    transition: color 0.2s; }
-  .leftNavContainer a:hover {
-    color: #20816d; }
-  .leftNavContainer .active {
-    color: #2eb398; }
+  @media (max-width: 500px) {
+    .leftNavContainer {
+      top: -123.55296px; } }
 
 .rightNavContainer {
-  padding-bottom: 13.33333px;
-  border-bottom: solid 1px #e4e9eb;
   position: absolute;
   top: 0;
   z-index: 1;
+  padding-bottom: 13.33333px;
+  border-bottom: solid 1px #e4e9eb;
   left: 0;
   text-align: right; }
-  .rightNavContainer a {
-    display: inline-block;
-    color: inherit;
-    padding: 20.59216px;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-weight: 700;
-    font-size: 0.9em;
-    transition: color 0.2s; }
-  .rightNavContainer a:hover {
-    color: #20816d; }
-  .rightNavContainer .active {
-    color: #2eb398; }
+  @media (max-width: 500px) {
+    .rightNavContainer {
+      top: -123.55296px; } }
 
 .rightNav, .leftNav {
   border-bottom: solid 1px #e4e9eb;

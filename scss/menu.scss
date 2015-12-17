@@ -5,18 +5,6 @@ $arrowWidth: 107px;
 nav {
     transition: transform 1s;
     transform: translateY(- $arrowWidth * 1.5 / $sqrt3);
-}
-
-@mixin menu() {
-    position: absolute;
-    top: 0;
-    z-index: 1;
-}
-
-@mixin nav-left-right() {
-    padding-bottom: ($sectionPadding / 3);
-    border-bottom: solid 1px $borderColor;
-    @include menu();
 
     a {
         display: inline-block;
@@ -26,8 +14,12 @@ nav {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 0.9em;
-
         transition: color 0.2s;
+
+        @media (min-width: 500px) and (max-width: 600px) {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
     }
 
     a:hover {
@@ -37,6 +29,24 @@ nav {
     .active {
         color: $brandColor;
     }
+}
+
+@mixin menu() {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+}
+
+@mixin nav-left-right() {
+    @include menu();
+
+    padding-bottom: ($sectionPadding / 3);
+    border-bottom: solid 1px $borderColor;
+
+    @media (max-width: 500px) {
+        top: - 2 * ($arrowWidth / $sqrt3);
+    }
+
 }
 
 .leftNavContainer {
