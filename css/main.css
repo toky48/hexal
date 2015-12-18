@@ -220,8 +220,11 @@ address {
       margin-right: auto; } }
 
 nav {
-  transition: transform 1s;
-  transform: translateY(-92.66472px); }
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0; }
   nav a {
     display: inline-block;
     color: inherit;
@@ -240,6 +243,14 @@ nav {
   nav .active {
     color: #2eb398; }
 
+.fixedMenu {
+  position: fixed; }
+  .fixedMenu .leftNavContainer, .fixedMenu .rightNavContainer {
+    border-bottom-style: none; }
+
+.visibleMenu {
+  top: 0px !important; }
+
 .arrow {
   width: 107px;
   height: 61.77648px;
@@ -255,7 +266,6 @@ nav {
   background-position: 50% 65%;
   position: absolute;
   top: 0;
-  z-index: 2;
   right: 0;
   left: 0;
   margin-left: auto;
@@ -301,7 +311,6 @@ nav {
   .leftNavContainer {
     position: absolute;
     top: 0;
-    z-index: 2;
     padding-bottom: 13.33333px;
     border-bottom: solid 1px #e4e9eb;
     right: 0; }
@@ -309,7 +318,6 @@ nav {
   .rightNavContainer {
     position: absolute;
     top: 0;
-    z-index: 2;
     padding-bottom: 13.33333px;
     border-bottom: solid 1px #e4e9eb;
     left: 0;
@@ -325,10 +333,9 @@ nav {
   .mask {
     position: absolute;
     top: 0;
-    z-index: 2;
     box-sizing: border-box;
     border-bottom: solid 1px #e4e9eb;
-    z-index: 1;
+    z-index: -1;
     background-color: #323232;
     right: 0;
     left: 0;
@@ -337,7 +344,6 @@ nav {
   nav {
     position: absolute;
     top: 0;
-    z-index: 2;
     right: 0;
     left: 0;
     box-sizing: border-box;

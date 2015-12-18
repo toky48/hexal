@@ -3,8 +3,11 @@
 $arrowWidth: 107px;
 
 nav {
-    transition: transform 1s;
-    transform: translateY(- $arrowWidth * 1.5 / $sqrt3);
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
 
     a {
         display: inline-block;
@@ -31,10 +34,21 @@ nav {
     }
 }
 
+.fixedMenu {
+    position: fixed;
+
+    .leftNavContainer, .rightNavContainer {
+        border-bottom-style: none;
+    }
+}
+
+.visibleMenu {
+    top: 0px !important;
+}
+
 @mixin menu() {
     position: absolute;
     top: 0;
-    z-index: 2;
 }
 
 @mixin nav-left-right() {
@@ -95,7 +109,7 @@ nav {
         @include menu();
         box-sizing: border-box;
         border-bottom: solid 1px $borderColor;
-        z-index: 1;
+        z-index: -1;
         background-color: $menuBackground;
         right: 0;
         left: 0;
