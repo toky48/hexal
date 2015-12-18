@@ -26,7 +26,6 @@ $sqrt3: 1.73205080757;
     margin-bottom: ($width / (2 * $sqrt3) - 2 + $sqrt3 * $margin);
     margin-left: $margin;
     margin-right: $margin;
-    position: relative;
 
     background-size: auto (2 * $width / $sqrt3);
     background-position: center center;
