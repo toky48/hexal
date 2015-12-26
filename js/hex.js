@@ -13,10 +13,10 @@ $(function() {
     $(window).on("resize", adjustHexGrid);
 
     hexagon.css("transform", "scale(0)");
-    setTimeout(function() {
+    $(window).on("load", function() {
         hexagon.css("transition", "transform 0.5s");
         hexagon.css("transform", "scale(1)");
-    }, 200);
+    });
 
     function adjustHexGrid() {
         var hexGrid = $(".hexGrid");
