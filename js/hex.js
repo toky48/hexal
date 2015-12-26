@@ -1,16 +1,16 @@
 $(function() {
     var hexagon = $(".hex");
-    hexagon
+    hexagon.add(".arrow").add(".photo")
         .append('<div class="hexagon-before"></div>')
         .append('<div class="hexagon-after"></div>');
 
     hexagon.each(function(i, hex) {
         var imageUrl = $(hex).attr("data-image");
-       $(hex).css("background-image", "url(" + imageUrl + ")");
-   });
+        $(hex).css("background-image", "url(" + imageUrl + ")");
+    });
 
-   adjustHexGrid();
-   $(window).on("resize", adjustHexGrid);
+    adjustHexGrid();
+    $(window).on("resize", adjustHexGrid);
 
     hexagon.css("transform", "scale(0)");
     setTimeout(function() {
