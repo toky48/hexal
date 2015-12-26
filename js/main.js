@@ -69,7 +69,7 @@ $(function() {
     }
 
     function setupRegularOrMobileScrolling() {
-        var screenWidth = window.outerWidth;
+        var screenWidth = window.innerWidth;
 
         if(screenWidth < 520) {
             setupMobileScrolling();
@@ -81,7 +81,7 @@ $(function() {
     }
 
     function setupRegularOrMobileScrollingOnResize() {
-        var screenWidth = window.outerWidth;
+        var screenWidth = window.innerWidth;
 
         if(screenWidth < 520 && !mobileMode) {
             setupMobileScrolling();
