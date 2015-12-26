@@ -149,6 +149,15 @@ address {
       transform: rotate(-60deg) translate(50.25px, -29.01185px); }
     .hexGrid .hex .hexagon-after:before {
       transform: rotate(-120deg) translate(50.25px, 29.01185px); }
+  .hexGrid .hexMask {
+    background-color: #000000;
+    position: relative;
+    margin: 0;
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 1s; }
+  .hexGrid .hexMask:hover {
+    opacity: 0.5; }
   .hexGrid .newShortRow {
     margin-left: 120.5px; }
   .hexGrid .newLongRow {
@@ -221,7 +230,7 @@ address {
 
 nav {
   position: fixed;
-  z-index: 2;
+  z-index: 5;
   top: 0;
   left: 0;
   right: 0; }

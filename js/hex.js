@@ -1,6 +1,6 @@
 $(function() {
-    var hexagon = $(".hex");
-    hexagon.add(".arrow").add(".photo")
+    var hexagon = $(".hexGrid > .hex");
+    hexagon.add(".arrow").add(".photo").add(".hexMask")
         .append('<div class="hexagon-before"></div>')
         .append('<div class="hexagon-after"></div>');
 

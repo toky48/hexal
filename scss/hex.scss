@@ -62,6 +62,19 @@ $sqrt3: 1.73205080757;
         float: left;
     }
 
+    .hexMask {
+        background-color: #000000;
+        position: relative;
+        margin: 0;
+        z-index: 3;
+        opacity: 0;
+        transition: opacity 1s;
+    }
+
+    .hexMask:hover {
+        opacity: 0.5;
+    }
+
     .newShortRow {
         margin-left: 2 * $hexMargin + $hexWidth / 2;
     }
