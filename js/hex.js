@@ -16,7 +16,7 @@ $(function() {
     setTimeout(function() {
         hexagon.css("transition", "transform 0.5s");
         hexagon.css("transform", "scale(1)");
-    }, 800);
+    }, 200);
 
     function adjustHexGrid() {
         var hexGrid = $(".hexGrid");

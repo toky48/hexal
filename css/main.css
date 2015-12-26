@@ -220,7 +220,7 @@ address {
       margin-right: auto; } }
 
 nav {
-  position: absolute;
+  position: fixed;
   z-index: 2;
   top: 0;
   left: 0;
@@ -243,13 +243,14 @@ nav {
   nav .active {
     color: #2eb398; }
 
-.fixedMenu {
-  position: fixed; }
-  .fixedMenu .leftNavContainer, .fixedMenu .rightNavContainer {
-    border-bottom-style: none; }
+.fixedMenu .leftNavContainer, .fixedMenu .rightNavContainer {
+  border-bottom-style: none; }
 
 .visibleMenu {
   top: 0px !important; }
+
+.animatedMenu {
+  -webkit-transition: top 0.8s; }
 
 .arrow {
   width: 107px;
@@ -342,7 +343,6 @@ nav {
     height: 61.77648px; }
 
   nav {
-    position: absolute;
     top: 0;
     right: 0;
     left: 0;

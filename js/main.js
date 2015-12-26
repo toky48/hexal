@@ -51,11 +51,12 @@ $(function() {
         var navHeight = nav.height();
         nav.css("top", - navHeight - arrHeight / 2);
         arrowAndMask.css("top", navHeight + arrHeight / 2);
+        setTimeout(function() {
+            nav.addClass("animatedMenu");
+        });
 
         arrowAndMask.on("click", showOrHideMobileMenu);
         $(window).off("scroll", scrollRegularMenu);
-        $(window).on("scroll", scrollMobileMenu);
-
     }
 
     function setupRegularScrolling() {
@@ -64,7 +65,6 @@ $(function() {
         arrowAndMask.attr("style", "");
 
         arrowAndMask.off("click", showOrHideMobileMenu);
-        $(window).off("scroll", scrollMobileMenu);
         $(window).on("scroll", scrollRegularMenu);
     }
 
@@ -108,22 +108,10 @@ $(function() {
         }
     }
 
-    function scrollMobileMenu() {
-        var scrollPos = $(window).scrollTop();
-
-        if(scrollPos > arrHeight * 1.5 && !nav.hasClass("fixedMenu")) {
-            nav.addClass("fixedMenu");
-        }
-
-        if(scrollPos === 0) {
-            nav.removeClass("fixedMenu");
-        }
-    }
-
     function scrollRegularMenu() {
         var scrollPos = $(window).scrollTop();
 
-        if(scrollPos > arrHeight * 1.5 && !nav.hasClass("fixedMenu")) {
+        if(scrollPos !== 0 && !nav.hasClass("fixedMenu")) {
             nav.addClass("fixedMenu");
         }
 
