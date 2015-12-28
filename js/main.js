@@ -13,7 +13,9 @@ $(function() {
     var mobileMode;
 
     setupRegularOrMobileScrolling();
-    $(window).on("resize", setupRegularOrMobileScrollingOnResize);
+    $(window).on("resize", setupRegularOrMobileScrolling);
+    
+    $(window).on("scroll", scrollRegularMenu);
 
     adjustMenu();
     $(window).on("resize", adjustMenu);
@@ -56,7 +58,6 @@ $(function() {
         });
 
         arrowAndMask.on("click", showOrHideMobileMenu);
-        $(window).off("scroll", scrollRegularMenu);
     }
 
     function setupRegularScrolling() {
@@ -65,47 +66,26 @@ $(function() {
         arrowAndMask.attr("style", "");
 
         arrowAndMask.off("click", showOrHideMobileMenu);
-        $(window).on("scroll", scrollRegularMenu);
     }
 
     function setupRegularOrMobileScrolling() {
         var screenWidth = window.innerWidth;
+        var fromRegularToMobileMode =
+            screenWidth < 520 && (mobileMode === undefined || !mobileMode);
+        var fromMobileToRegularMode =
+            screenWidth >= 520 && (mobileMode === undefined || mobileMode);
 
-        if(screenWidth < 520) {
+        if(fromRegularToMobileMode) {
             setupMobileScrolling();
             mobileMode = true;
-        } else if(screenWidth >= 520) {
+        } else if(fromMobileToRegularMode) {
             setupRegularScrolling();
-            mobileMode = false;
-        }
-    }
-
-    function setupRegularOrMobileScrollingOnResize() {
-        var screenWidth = window.innerWidth;
-
-        if(screenWidth < 520 && !mobileMode) {
-            setupMobileScrolling();
-
-            mobileMode = true;
-        } else if(screenWidth >= 520 && mobileMode) {
-            setupRegularScrolling();
-
             mobileMode = false;
         }
     }
 
     function showOrHideMobileMenu() {
-        var navHeight = nav.height();
-        var scrollPos = $(window).scrollTop();
-
-        if(nav.hasClass("visibleMenu")) {
-            nav.removeClass("visibleMenu");
-            if(scrollPos === 0) {
-                nav.removeClass("fixedMenu");
-            }
-        } else {
-            nav.addClass("visibleMenu");
-        }
+        nav.toggleClass("visibleMenu");
     }
 
     function scrollRegularMenu() {
