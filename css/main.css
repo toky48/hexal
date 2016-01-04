@@ -107,6 +107,7 @@ address {
 
 .hexGrid {
   box-sizing: border-box;
+  max-width: 1206px;
   margin: auto;
   padding-top: 58.0237px;
   overflow: auto; }

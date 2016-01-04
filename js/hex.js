@@ -22,10 +22,10 @@ $(function() {
         var hexGrid = $(".hexGrid");
         hexGrid.width("auto");
         var gridWidth = hexGrid.width();
-        hexagon.removeClass("newShortRow");
-        hexagon.removeClass("newLongRow");
+        hexagon.filter(".newShortRow").removeClass("newShortRow");
+        hexagon.filter(".newLongRow").removeClass("newLongRow");
 
-        var hexWidth = hexagon.width();
+        var hexWidth = hexagon.width() + 1;
         var hexMargin = parseInt(hexagon.css("margin-left"), 10);
         var fullWidth = hexWidth + 2 * hexMargin;
 

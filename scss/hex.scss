@@ -53,6 +53,7 @@ $sqrt3: 1.73205080757;
 
 .hexGrid {
     box-sizing: border-box;
+    max-width: 6 * $hexWidth;
     margin: auto;
     padding-top: $hexWidth / (2 * $sqrt3);
     overflow: auto;
